@@ -1,0 +1,37 @@
+# Checks the site on every pull request (and is reused by the deploy workflow before every deploy).
+name: Checks
+
+on:
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install tools
+        run: npm ci
+
+      - name: Structure, links, assets, translations, handoff packages
+        run: python3 tools/check_site.py
+
+      - name: HTML validation
+        run: npx html-validate "site/**/*.html"
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Accessibility (WCAG 2.1 AA, every page, language and width)
+        run: node tools/a11y.mjs

@@ -1,0 +1,9 @@
+{
+  "name": "QualiWare (proof of concept)",
+  "languages": [
+    {"code": "en", "name": "English", "source": true}
+  ],
+  "pages": [
+    {"name": "Front page", "route": "", "status": "live", "handoff": null}
+  ]
+}

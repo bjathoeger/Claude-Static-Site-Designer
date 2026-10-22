@@ -1,0 +1,10 @@
+{
+  "language": "en",
+  "name": "English",
+  "source": true,
+  "text": {
+    "placeholder.title": "This site is being built",
+    "placeholder.body": "The first page arrives with the first handoff from the design project."
+  },
+  "attr": {}
+}

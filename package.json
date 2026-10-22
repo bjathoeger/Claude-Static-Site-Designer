@@ -1,0 +1,17 @@
+{
+  "name": "claude-static-site-designer",
+  "private": true,
+  "description": "Tools for checking the static site before it is published (see tools/ and .github/workflows/).",
+  "type": "module",
+  "scripts": {
+    "check": "python3 tools/check_site.py && html-validate \"site/**/*.html\" && node tools/a11y.mjs",
+    "check:site": "python3 tools/check_site.py",
+    "check:html": "html-validate \"site/**/*.html\"",
+    "check:a11y": "node tools/a11y.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "html-validate": "11.16.1",
+    "playwright": "1.63.0"
+  }
+}
