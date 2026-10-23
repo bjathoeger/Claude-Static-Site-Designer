@@ -37,6 +37,6 @@ Run them locally: `npm ci`, then `npm run check` (`npx playwright install chromi
 ## One-time setup (repository settings)
 1. **Settings › Pages › Build and deployment › Source: GitHub Actions.**
 2. **Settings › Branches › Add rule for `main`**: require a pull request before merging, and require the status check
-   "checks" to pass. Then nothing reaches the live site without passing the checks and your merge.
+   "checks" to pass. Then nothing reaches the live site without passing the checks and a merge you have approved.
 3. Give the builder project access to this repository only (Contents, Pull requests and Workflows: read and write),
    never as a token pasted into a chat.

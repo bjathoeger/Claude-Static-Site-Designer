@@ -18,8 +18,9 @@ its `README.md` and `handoff.json`.
 
 ## Git and access
 - Work in a clone of the repository in the cloud workspace, on a new branch per build:
-  `build/<brief ID>-<page route or "home">-<handoff date>`. Never commit to `main`, never merge, never force-push:
-  Bjarke reviews and merges the pull request, and the merge deploys the site.
+  `build/<brief ID>-<page route or "home">-<handoff date>`. Never commit to `main` and never force-push. Bjarke
+  reviews the pull request. Merge it only when he says to (his go-ahead in the chat) and its checks have passed;
+  the merge deploys the site.
 - GitHub access is given to this project's sessions for this one repository only. Never ask for a token in the chat,
   never write one into a file, a commit or a project doc. If access is missing, say so and stop.
 - One commit per logical step is fine; the pull request is the unit of review.
@@ -79,10 +80,11 @@ its `README.md` and `handoff.json`.
    built the recommended way meanwhile when that is safe to change later.
 6. **Pull request** to `main`: title `Build <page> from <ID> handoff-<date>`; body: approved or not (and why),
    what was built, check results, the visual comparison numbers per artboard and language, links with no
-   destination, questions, and that Bjarke merging it publishes the site. The repository's checks run on the pull
+   destination, questions, and that merging it publishes the site. The repository's checks run on the pull
    request: wait for them and fix failures.
-7. **Tell Bjarke** the pull request link and anything that needs his decision. After he merges, the deploy workflow
-   publishes the site (one or two minutes); check the live page in every language.
+7. **Tell Bjarke** the pull request link and anything that needs his decision. On his go-ahead, merge it (once the
+   checks have passed), or he merges it himself. The deploy workflow then publishes the site (one or two minutes):
+   check that the deploy run succeeded and check the live page in every language.
 
 ## Always
 - **The design is decided in the design project.** Never change a design to make building easier; when something
