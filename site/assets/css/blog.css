@@ -1,0 +1,131 @@
+/* Blog overview (abigail1-a · Library): blog header, hero and featured, all stories, go deeper.
+   Desktop design 1440px, phone design 390px. Phone layout below 768px, desktop layout from 1024px, sizes scale in
+   between (see BUILDLOG.md). */
+
+/* blog header */
+.bh{display:flex;align-items:center;gap:32px;height:76px;padding:0 var(--edge);border-bottom:1px solid var(--line)}
+.bh .home{display:flex;align-items:center;gap:14px;text-decoration:none}
+.bh .home img{width:126px;height:30px;display:block}
+.bh .home .tag{font-family:var(--font-mono);font-size:14px;border:1px solid var(--black);border-radius:999px;padding:3px 12px}
+.bh nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.bh nav button{font:inherit;font-size:16px;background:none;border:0;padding:10px 14px;border-radius:999px;cursor:pointer;color:var(--black)}
+.bh nav button:hover{background:var(--surface)}
+.bh nav button[aria-pressed="true"]{background:var(--black);color:var(--white)}
+.bh .right{margin-left:auto;display:flex;align-items:center;gap:20px}
+.bh .ext{font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:40px}
+.bh .ext:hover{text-decoration:underline}
+
+/* hero and featured */
+.hero{padding:88px var(--edge) 0}
+.hero h1{font-weight:400;font-size:clamp(58px,7.778vw,112px);line-height:1;letter-spacing:-3px;margin:0}
+.hero h1 mark{background:linear-gradient(transparent 62%,var(--qw-green) 62%,var(--qw-green) 90%,transparent 90%);color:inherit}
+.hero .lede{font-size:24px;line-height:1.4;color:var(--slate);max-width:720px;margin:28px 0 0}
+.hero .over{margin:72px 0 24px;color:var(--slate)}
+.feat{display:grid;grid-template-columns:1.65fr 1fr;gap:48px;align-items:start}
+.fcard{display:block;text-decoration:none}
+.fcard .img{border-radius:16px;overflow:hidden;background:var(--surface)}
+.fcard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.fcard:hover img{transform:scale(1.03)}
+.fcard.big .img{aspect-ratio:16/10}
+.fcard.side .img{aspect-ratio:4/3}
+.meta{display:flex;align-items:center;gap:12px;margin:20px 0 12px;flex-wrap:wrap}
+.chip{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--ice-blue);color:var(--dark-blue);padding:4px 10px;border-radius:6px}
+.date{font-family:var(--font-mono);font-size:13px;color:var(--slate)}
+.fcard h2{font-size:clamp(30px,3.056vw,44px);line-height:1.1;margin:0;letter-spacing:-.5px}
+.fcard.side h2{font-size:clamp(26px,2.083vw,30px);line-height:1.15}
+.fcard .rm{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:16px;text-decoration:underline;text-underline-offset:5px}
+.fcard:hover h2{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--qw-green);text-underline-offset:6px}
+
+/* all stories */
+.all{padding:120px var(--edge) 104px}
+.all h2.t{font-weight:400;font-size:clamp(42px,4.444vw,64px);letter-spacing:-1.5px;margin:0 0 32px}
+.bar{display:flex;align-items:center;gap:16px;padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:48px;position:relative}
+.fbtn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid var(--black);border-radius:10px;background:var(--white);color:var(--black);font:inherit;font-size:16px;cursor:pointer}
+.fbtn svg{transition:transform .2s;flex:none}
+.fbtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.fpanel{position:absolute;top:56px;left:0;z-index:5;width:340px;background:var(--white);border:1px solid var(--black);border-radius:12px;padding:8px;box-shadow:0 18px 40px var(--panel-shadow)}
+.fpanel[hidden]{display:none}
+.fpanel button{display:flex;justify-content:space-between;width:100%;min-height:44px;align-items:center;padding:0 14px;border:0;background:none;color:var(--black);font:inherit;font-size:16px;border-radius:8px;cursor:pointer;text-align:left}
+.fpanel button:hover{background:var(--surface)}
+.fpanel button[aria-pressed="true"]{background:var(--black);color:var(--white)}
+.fpanel .n{font-family:var(--font-mono);font-size:13px}
+.seg{display:inline-flex;border:1px solid var(--black);border-radius:10px;overflow:hidden}
+.seg button{min-height:44px;padding:0 16px;border:0;border-right:1px solid var(--black);background:var(--white);color:var(--black);font:inherit;font-size:15px;cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--black);color:var(--qw-green)}
+.search{margin-left:auto;display:flex;align-items:center;gap:10px;border:1px solid var(--black);border-radius:10px;min-height:44px;padding:0 14px;width:340px}
+.search input{border:0;font:inherit;font-size:16px;flex:1;outline:none;background:none;min-width:0;color:var(--black)}
+.search:focus-within{outline:3px solid var(--dark-blue);outline-offset:2px}
+.status{font-family:var(--font-mono);font-size:13px;color:var(--slate);margin:-28px 0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 36px}
+.card{display:block;text-decoration:none}
+.card[hidden]{display:none}
+.card .img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--surface)}
+.card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card .img.is-contain img{object-fit:contain;padding:18px;box-sizing:border-box;background:var(--white)}
+.card:hover img{transform:scale(1.03)}
+.card h3{font-size:25px;line-height:1.2;margin:0}
+.card:hover h3{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--qw-green);text-underline-offset:5px}
+.card .rm{display:inline-block;margin-top:14px;font-size:15px;text-decoration:underline;text-underline-offset:5px}
+.empty{grid-column:1/-1;margin:0;padding:48px;border:1px dashed var(--dark-grey);border-radius:12px;font-size:18px}
+.empty[hidden]{display:none}
+.more{display:flex;justify-content:center;margin-top:64px}
+.more[hidden]{display:none}
+.more .pill{background:var(--white);border:1px solid var(--black);color:var(--black)}
+.more .pill:hover{background:var(--black);color:var(--white)}
+
+/* go deeper */
+.deeper{background:var(--dark-green);color:var(--white);padding:96px var(--edge);display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.deeper .over{color:var(--ice-blue);margin:0 0 20px}
+.deeper h2{font-size:clamp(38px,3.889vw,56px);line-height:1.05;letter-spacing:-1px;margin:0;font-weight:400}
+.deeper p{font-size:20px;line-height:1.5;color:var(--ice-blue);margin:24px 0 36px;max-width:560px}
+.deeper .acts{display:flex;gap:14px;flex-wrap:wrap}
+.pill.white{background:var(--white);color:var(--dark-green)}
+.pill.white:hover{background:var(--ice-blue)}
+.pill.ghost{background:none;color:var(--white);box-shadow:inset 0 0 0 1px var(--white)}
+.pill.ghost:hover{background:var(--white);color:var(--dark-green)}
+.deeper :focus-visible{outline-color:var(--qw-green)}
+.deeper img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+
+/* between the designs: the header drops what doesn't fit (the Topic filter in All stories does the same job) */
+@media (max-width:1179px){
+  .bh .ext{display:none}
+}
+@media (max-width:1023px){
+  .bh nav{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .search{flex:1 1 220px;width:auto;max-width:340px}
+  .deeper{grid-template-columns:1fr;gap:48px}
+}
+
+/* phone layout (design: 390px) */
+@media (max-width:767px){
+  .bh{height:64px;padding:0 16px;gap:12px}
+  .bh .home{min-height:44px}
+  .bh .home img{width:104px;height:25px}
+  .bh .right{gap:8px}
+  .bh .pill.black{min-height:44px;padding:0 16px;font-size:15px}
+  .hero{padding:32px 16px 0}
+  .hero h1{letter-spacing:-1.5px}
+  .hero .lede{font-size:19px;margin-top:20px}
+  .hero .over{margin:48px 0 18px}
+  .feat{grid-template-columns:1fr;gap:48px}
+  .fcard .rm{min-height:44px;margin-top:6px}
+  .all{padding:80px 16px 72px}
+  .all h2.t{margin-bottom:24px}
+  .bar{flex-wrap:wrap;gap:12px;padding-bottom:20px;margin-bottom:32px}
+  .search{order:-1;flex:none;width:100%;max-width:none;margin-left:0;min-height:48px;box-sizing:border-box}
+  .search input{min-height:44px}
+  .fbtn{flex:1;min-width:0;justify-content:space-between;min-height:48px;white-space:nowrap;font-size:15px;padding:0 14px}
+  .fbtn .lbl{overflow:hidden;text-overflow:ellipsis}
+  .seg button{min-height:48px;padding:0 12px}
+  .fpanel{width:100%;box-sizing:border-box;top:128px}
+  .status{margin:-16px 0 24px}
+  .grid{grid-template-columns:1fr;gap:44px}
+  .card h3{font-size:23px}
+  .more{margin-top:48px}
+  .more .pill{width:100%;justify-content:center;min-height:52px}
+  .deeper{padding:64px 16px;gap:40px}
+  .deeper p{font-size:18px}
+  .deeper .acts a{width:100%;justify-content:center;min-height:52px}
+}

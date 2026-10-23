@@ -3,21 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>QualiWare</title>
+<title data-i18n="build-meta-title">The QualiWare blog</title>
+<meta name="description" content="Stories that show the QualiWare platform at work, and how we keep up with the challenges enterprise architects face." data-i18n-content="build_meta_description">
 <style>.i18n-pending body{visibility:hidden}</style>
 <script>(function(){try{var l=new URL(location.href).searchParams.get('lang')||localStorage.getItem('site-lang');if(l&&l!=='en'){document.documentElement.classList.add('i18n-pending');setTimeout(function(){document.documentElement.classList.remove('i18n-pending')},1500)}}catch(e){}})();</script>
+<link rel="preload" href="assets/fonts/pt-sans/PTSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/blog.css">
+<link rel="stylesheet" href="assets/css/site-footer.css">
 <script src="assets/js/i18n.js" defer></script>
-<style>
-  body{margin:0;font-family:system-ui,sans-serif;color:#2e4163;background:#fff}
-  main{max-width:640px;margin:20vh auto;padding:0 24px}
-  h1{font-size:40px;line-height:1.1}
-  p{font-size:18px;line-height:1.55}
-</style>
+<script src="assets/js/story-filter.js" defer></script>
 </head>
 <body>
-<main>
-  <h1 data-i18n="placeholder.title">This site is being built</h1>
-  <p data-i18n="placeholder.body">The first page arrives with the first handoff from the design project.</p>
+<a class="skip" href="#main" data-i18n="build-skip">Skip to content</a>
+<header class="bh">
+  <a class="home" href="./" aria-current="page" aria-label="QualiWare blog, all stories" data-i18n-aria-label="a_eb3bf5"><img src="assets/images/brand/qualiware-wordmark-black.svg" alt="QualiWare" width="126" height="30" data-i18n-alt="site_footer_a_bd6905"><span class="tag" data-i18n="t-0b9d2b">Blog</span></a>
+  <nav aria-label="Blog topics" data-i18n-aria-label="a_aaabfc">
+    <ul>
+      <li><button type="button" aria-pressed="true" data-topic="All" data-i18n="t-e3021f">All stories</button></li>
+      <li><button type="button" aria-pressed="false" data-topic="User Tips" data-i18n="t-246f8c">User tips</button></li>
+      <li><button type="button" aria-pressed="false" data-topic="News" data-i18n="t-34c808">News</button></li>
+      <li><button type="button" aria-pressed="false" data-topic="Analyst Recognition" data-i18n="t-d2d2fa">Analyst recognition</button></li>
+    </ul>
+  </nav>
+  <div class="right"><a class="ext" href="https://www.qualiware.com/"><span data-i18n="t-036ed7">qualiware.com</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="pill black" href="https://www.qualiware.com/webinars" data-i18n="t-c79d89">Watch webinars</a></div>
+</header>
+<main id="main">
+  <section class="hero">
+    <h1 data-i18n="t-148f47">The QualiWare <mark>blog</mark></h1>
+    <p class="lede" data-i18n="t-ae21a4">Stories that show the platform at work, and how we keep up with the challenges enterprise architects face.</p>
+    <p class="mono over" data-i18n="t-0224c2">Featured stories</p>
+    <div class="feat">
+      <a class="fcard big" href="blog-post/"><div class="img"><img src="assets/images/illustrations/city-collage-blue.png" alt=""></div><div class="meta"><span class="chip" data-i18n="t-34c808-2">News</span><span class="date"><time datetime="2026-07-28" data-i18n="t-6e8748">28 Jul 2026</time></span></div><h2 data-i18n="t-7be132">What is a Digital Twin of an Organization (DTO)?</h2><span class="rm"><span data-i18n="w-e553fe">Read story</span> <span aria-hidden="true">→</span></span></a>
+      <a class="fcard side" href="blog-post/"><div class="img"><img src="assets/images/illustrations/gold-stars.png" alt=""></div><div class="meta"><span class="chip" data-i18n="t-2120ab">Analyst Recognition</span><span class="date"><time datetime="2026-08-04" data-i18n="t-66b02c">4 Aug 2026</time></span></div><h2 data-i18n="t-4238e7">QualiWare Recognized as a Champion</h2><span class="rm"><span data-i18n="w-e553fe-2">Read story</span> <span aria-hidden="true">→</span></span></a>
+    </div>
+  </section>
+  <section class="all" id="all-stories" aria-labelledby="all-stories-title">
+    <h2 class="t" id="all-stories-title" data-i18n="t-e3021f-2">All stories</h2>
+    <div class="bar">
+      <button type="button" class="fbtn" aria-expanded="false" aria-controls="topic-panel"><span class="lbl"><span data-i18n="build-topic">Topic:</span> <span class="cur">All topics</span></span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="fpanel" id="topic-panel" hidden>
+        <button type="button" aria-pressed="true" data-topic="All"><span data-i18n="build-topic-all">All</span><span class="n">54</span></button>
+        <button type="button" aria-pressed="false" data-topic="News"><span>News</span><span class="n">25</span></button>
+        <button type="button" aria-pressed="false" data-topic="User Tips"><span>User Tips</span><span class="n">14</span></button>
+        <button type="button" aria-pressed="false" data-topic="Analyst Recognition"><span>Analyst Recognition</span><span class="n">8</span></button>
+        <button type="button" aria-pressed="false" data-topic="QW Inside"><span>QW Inside</span><span class="n">3</span></button>
+        <button type="button" aria-pressed="false" data-topic="QualiWare CEO Blog Post"><span>QualiWare CEO Blog Post</span><span class="n">2</span></button>
+        <button type="button" aria-pressed="false" data-topic="France"><span>France</span><span class="n">2</span></button>
+      </div>
+      <div class="seg" role="group" aria-label="Sort stories" data-i18n-aria-label="a_e605bf"><button type="button" aria-pressed="true" data-sort="new" data-i18n="t-d04428">Newest</button><button type="button" aria-pressed="false" data-sort="old" data-i18n="t-c47bb8">Oldest</button><button type="button" aria-pressed="false" data-sort="az" data-i18n="t-20ec7e">A–Z</button></div>
+      <label class="search"><span class="sr" data-i18n="t-b1112c">Search stories</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input type="search" name="q" placeholder="Search stories" data-i18n-placeholder="a_b1112c" autocomplete="off"></label>
+    </div>
+    <p class="status" aria-live="polite" data-all="All topics" data-new="newest first" data-old="oldest first" data-az="A to Z" data-match="matching “{q}”" data-i18n-data-all="build_status_all" data-i18n-data-new="build_status_new" data-i18n-data-old="build_status_old" data-i18n-data-az="build_status_az" data-i18n-data-match="build_status_match">All topics · newest first</p>
+    <div class="grid">
+        <a class="card" href="blog-post/" data-cat="Analyst Recognition" data-date="2026-08-04"><div class="img"><img src="assets/images/illustrations/gold-stars.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">Analyst Recognition</span><span class="date"><time datetime="2026-08-04">4 Aug 2026</time></span></div><h3>QualiWare Recognized as a Champion</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="Analyst Recognition" data-date="2026-07-30"><div class="img is-contain"><img src="assets/images/restricted/analyst-and-awards/gartner-mq-dto.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">Analyst Recognition</span><span class="date"><time datetime="2026-07-30">30 Jul 2026</time></span></div><h3>Why Gartner&#39;s First Magic Quadrant for Digital Twin of an Organization Platforms Matters</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="News" data-date="2026-07-28"><div class="img"><img src="assets/images/illustrations/city-collage-blue.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">News</span><span class="date"><time datetime="2026-07-28">28 Jul 2026</time></span></div><h3>What is a Digital Twin of an Organization (DTO)?</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="User Tips" data-date="2026-07-20"><div class="img"><img src="assets/images/photos/people/people-reviewing-charts-documents.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">User Tips</span><span class="date"><time datetime="2026-07-20">20 Jul 2026</time></span></div><h3>Project Portfolio Management Is About More Than Managing Projects</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="News" data-date="2026-06-22"><div class="img"><img src="assets/images/illustrations/lock-collage-orange.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">News</span><span class="date"><time datetime="2026-06-22">22 Jun 2026</time></span></div><h3>Own Your Digital Resilience</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="News" data-date="2026-06-10"><div class="img"><img src="assets/images/photos/people/woman-presenting-with-tablet.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">News</span><span class="date"><time datetime="2026-06-10">10 Jun 2026</time></span></div><h3>Trends in Enterprise Architecture 2026</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="User Tips" data-date="2026-05-11"><div class="img"><img src="assets/images/illustrations/manufacturing-collage.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">User Tips</span><span class="date"><time datetime="2026-05-11">11 May 2026</time></span></div><h3>QualiWare DTO Manufacturing use case</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="QualiWare CEO Blog Post" data-date="2026-04-28"><div class="img"><img src="assets/images/photos/places/city-copenhagen.jpg" alt="" loading="lazy"></div><div class="meta"><span class="chip">QualiWare CEO Blog Post</span><span class="date"><time datetime="2026-04-28">28 Apr 2026</time></span></div><h3>Great Preparedness Day</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="User Tips" data-date="2026-04-14"><div class="img"><img src="assets/images/photos/people/team-workshop-sticky-notes-wide.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">User Tips</span><span class="date"><time datetime="2026-04-14">14 Apr 2026</time></span></div><h3>Build a Digital Twin of an Organization (DTO) in 8–12 weeks</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="QualiWare CEO Blog Post" data-date="2026-03-16"><div class="img"><img src="assets/images/illustrations/planet-in-space.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">QualiWare CEO Blog Post</span><span class="date"><time datetime="2026-03-16">16 Mar 2026</time></span></div><h3>Preparedness and Digital Sovereignty</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="News" data-date="2026-03-02"><div class="img"><img src="assets/images/photos/places/city-london.jpg" alt="" loading="lazy"></div><div class="meta"><span class="chip">News</span><span class="date"><time datetime="2026-03-02">2 Mar 2026</time></span></div><h3>How QualiWare Empowers Financial Services</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="News" data-date="2026-02-10"><div class="img"><img src="assets/images/illustrations/eye-collage-orange.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">News</span><span class="date"><time datetime="2026-02-10">10 Feb 2026</time></span></div><h3>From Digital Dependency to Digital Sovereignty</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="Analyst Recognition" data-date="2026-01-30"><div class="img is-contain"><img src="assets/images/restricted/analyst-and-awards/info-tech-2026-leader-ea.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">Analyst Recognition</span><span class="date"><time datetime="2026-01-30">30 Jan 2026</time></span></div><h3>Our customers named QualiWare a Leader in Enterprise Architecture – again</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="User Tips" data-date="2025-08-19"><div class="img is-contain"><img src="assets/images/product/screenshots/qualichat.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">User Tips</span><span class="date"><time datetime="2025-08-19">19 Aug 2025</time></span></div><h3>AI Features in QualiWare 10.10</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+        <a class="card" href="blog-post/" data-cat="France" data-date="2023-09-22"><div class="img"><img src="assets/images/illustrations/city-collage-violet.png" alt="" loading="lazy"></div><div class="meta"><span class="chip">France</span><span class="date"><time datetime="2023-09-22">22 Sep 2023</time></span></div><h3 lang="fr">Gestion du portefeuille informatique avec QualiWare</h3><span class="rm" data-i18n="t-e553fe">Read story</span></a>
+      <p class="empty" hidden data-i18n="build-empty">No stories match. Try another topic or search word.</p>
+    </div>
+    <div class="more" hidden><button type="button" class="pill" data-i18n="build-more">Load more stories</button></div>
+  </section>
+  <section class="deeper">
+    <div><p class="mono over" data-i18n="t-eb4d3e">Go deeper</p><h2 data-i18n="t-e97959">See the platform behind the stories</h2><p data-i18n="t-ff3a67">Watch a recorded webinar, or explore how QualiWare builds a connected model of your organization.</p><div class="acts"><a class="pill white" href="https://www.qualiware.com/webinars" data-i18n="t-f57c68">Watch recorded webinars</a><a class="pill ghost" href="https://www.qualiware.com/digital-twin-of-an-organization" data-i18n="t-08ea61">Explore the platform</a></div></div>
+    <img src="assets/images/photos/people/two-colleagues-at-laptop.png" alt="Two colleagues looking at a laptop together" data-i18n-alt="a_9d98a6" loading="lazy">
+  </section>
 </main>
+<footer class="site-foot-wrap">
+<div class="site-foot" data-part="site-footer"><div class="sf-in"><div class="sf-brand"><img src="assets/images/brand/qualiware-wordmark-white.svg" alt="QualiWare" width="150" height="36" data-i18n-alt="site_footer_a_bd6905"><p data-i18n="site-footer-t-d9ec52">QualiWare ApS<br>Ryttermarken 15<br>DK 3520 Farum, Denmark</p></div><div class="sf-col"><h2 data-i18n="site-footer-t-b37456">Contact</h2><ul><li><a href="tel:+4545470700" data-i18n="site-footer-t-e05477">+45 45 470 700</a></li><li><a href="mailto:info@qualiware.com" data-i18n="site-footer-t-933c64">info@qualiware.com</a></li><li><a href="mailto:sales@qualiware.com" data-i18n="site-footer-t-1b42ef">sales@qualiware.com</a></li></ul></div><div class="sf-col"><h2 data-i18n="site-footer-t-87df60">Resources</h2><ul><li><a href="./" aria-current="page" data-i18n="site-footer-t-7341b4">QualiWare blog</a></li><li><a href="https://www.qualiware.com/webinars" data-i18n="site-footer-t-d7e32b">Webinars</a></li><li><a href="https://www.qualiware.com/gartner" data-i18n="site-footer-t-1c459b">Analyst research</a></li><li><a href="https://www.qualiware.com/clients" data-i18n="site-footer-t-2ec80e">Customer stories</a></li></ul></div><div class="sf-col"><h2 data-i18n="site-footer-t-7a1994">Company</h2><ul><li><a href="https://www.qualiware.com/book-a-demo" data-i18n="site-footer-t-a83de8">Book a demo</a></li><li><a href="https://www.qualiware.com/" data-i18n="site-footer-t-01d5a1">Terms &amp; conditions</a></li><li><a href="https://www.qualiware.com/" data-i18n="site-footer-t-74b548">Cookies policy</a></li><li><a href="https://www.qualiware.com/" data-i18n="site-footer-t-b65e36">Certifications</a></li></ul></div></div><div class="sf-base"><span data-i18n="site-footer-t-3aaea2">Certified in ISO 27001 · UN Global Compact participant · SKI supplier</span><span data-i18n="site-footer-t-f63dae">CVR 30731557</span></div></div>
+</footer>
 </body>
 </html>

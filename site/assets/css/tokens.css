@@ -1,0 +1,30 @@
+/* Design tokens: the design guide's colours, the colours derived from them (recipe in the comment) and the fonts.
+   Source: handoffs/abigail1/handoff-2026-10-23/handoff.json (colours, fonts). */
+
+@font-face{font-family:'PT Sans';src:url(../fonts/pt-sans/PTSans-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Sans';src:url(../fonts/pt-sans/PTSans-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Mono';src:url(../fonts/pt-mono/PTMono-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+
+:root{
+  /* design guide */
+  --black:#000;
+  --white:#fff;
+  --dark-green:#2b675b;
+  --ice-blue:#d2e9e3;
+  --dark-blue:#2e4163;
+  --dark-grey:#988f8f;
+  --qw-green:#00ff00;
+
+  /* derived */
+  --line:#e3f1ee;     /* 62% Ice Blue + white · dividers */
+  --surface:#f3f9f7;  /* 27% Ice Blue + white · hover backgrounds, image wells */
+  --slate:#525c72;    /* 66% Dark Blue + 34% Dark Grey · secondary text */
+  --panel-shadow:rgba(46,65,99,.18); /* Dark Blue at 18% · topic panel shadow */
+
+  --font-sans:'PT Sans',sans-serif;
+  --font-mono:'PT Mono',monospace;
+
+  /* page gutter: 16px on phones, 64px from the 1440px design up; content capped at 1312px */
+  --gutter:clamp(16px,4.444vw,64px);
+  --edge:max(var(--gutter),calc((100% - 1312px) / 2));
+}
