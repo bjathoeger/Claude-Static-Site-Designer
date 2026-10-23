@@ -1,0 +1,2 @@
+# Handoff packages are frozen: keep every byte as delivered (sha256 is checked).
+handoffs/** -text
