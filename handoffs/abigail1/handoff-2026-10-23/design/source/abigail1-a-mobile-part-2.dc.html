@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>abigail1-a · Mobile · Part 2</title>
+<script src="./support.js"></script>
+<!-- HANDOFF:
+variant: Mobile version of abigail1-a (board-01.dc.html), 390 px wide: the same sections, content, images and behaviour, laid out for this width. Build it as abigail1-a's layout at this width: everything in abigail1-a's HANDOFF comment holds unless noted here.
+what changes at this width, section by section (fill in):
+  · header (s1): topic shortcuts and the qualiware.com link are hidden (the Topic filter in s2 does the same job); wordmark, Blog tag and a 44px "Watch webinars" pill stay.
+  · s1 Hero and featured: 16px side margins; h1 58px; featured cards stacked, big card first.
+  · s2 All stories: h2 42px; the search field comes first at full width, then Topic (full-width button, its panel full width under the bar) and Sort; one column of cards; full-width "Load more stories".
+  · s3 Go deeper: text over photo, buttons full width.
+  · s4 Main site footer: stands for the main site's phone footer: brand on top, then two columns of links (44px rows).
+brief: abigail-qualiware-blog-site-brief-1.md, ID abigail1 (Content Site - Brief Generator v1).
+annotations: the bright red .sec-tag chips (#e60000, deliberately outside the brand palette) are canvas-only section labels for feedback, named <brief ID>-<artboard letter>-s<n> (e.g. "abigail1-a-s1"); sections are numbered in page order and renumber when a section is added, removed or moved, and artboard letters close up when an artboard is deleted; they are toggled by the "Show section labels" tweak, and clicking one in Play mode copies its name to the clipboard. Do NOT build them (nor the copy script).
+prototype: links name their website page in data-goto (data-goto-else: the page to use until it exists): build each to that page's URL. The hrefs to board-NN.dc.html, onClick="{{navGo}}", goVals() and the onGo prop are canvas-only wiring for Play and previews: do NOT build them. Shared part site-footer (data-part): build it once, as one component on every page that has it; values set outside its markers are per page.
+language: English (en), one of this page's languages (en), flattened from the canvas's language layers; every block is in this language
+artboard role (canvas-only): Part 2 of abigail1-a · Mobile: the same page continued below the previous part (the canvas caps a frame at 8000 px), so build the parts as one page, in order; its role follows that artboard, and the chip at the top-left shows that role (updated at every sync). Annotation only: do NOT build the chip.
+-->
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'PT Sans';src:url(../../assets/fonts/pt-sans/PTSans-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Sans';src:url(../../assets/fonts/pt-sans/PTSans-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Sans';src:url(../../assets/fonts/pt-sans/PTSans-Italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'PT Sans Narrow';src:url(../../assets/fonts/pt-sans-narrow/PTSansNarrow-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Mono';src:url(../../assets/fonts/pt-mono/PTMono-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Serif';src:url(../../assets/fonts/pt-serif/PTSerif-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Serif';src:url(../../assets/fonts/pt-serif/PTSerif-Italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'PT Serif';src:url(../../assets/fonts/pt-serif/PTSerif-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+body{margin:0}
+.page{position:relative}
+.page > section,.page > footer,.page > div{position:relative}
+
+.page{background:#fff;color:#000;font-family:'PT Sans',sans-serif;--line:#e3f1ee;--surface:#f3f9f7;--slate:#525c72}
+.page a{color:inherit}
+.page :focus-visible{outline:3px solid #2e4163;outline-offset:3px;border-radius:4px}
+.mono{font-family:'PT Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* blog header */
+.bh{display:flex;align-items:center;gap:32px;height:76px;padding:0 64px;border-bottom:1px solid var(--line)}
+.bh .home{display:flex;align-items:center;gap:14px;text-decoration:none}
+.bh .home img{width:126px;height:30px;display:block}
+.bh .home .tag{font-family:'PT Mono',monospace;font-size:14px;border:1px solid #000;border-radius:999px;padding:3px 12px}
+.bh nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.bh nav button{font:inherit;font-size:16px;background:none;border:0;padding:10px 14px;border-radius:999px;cursor:pointer;color:#000}
+.bh nav button:hover{background:var(--surface)}
+.bh nav button[aria-pressed="true"]{background:#000;color:#fff}
+.bh .right{margin-left:auto;display:flex;align-items:center;gap:20px}
+.bh .ext{font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:40px}
+.bh .ext:hover{text-decoration:underline}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;border:0;font-family:inherit;transition:background .2s,color .2s}
+.pill.black{background:#000;color:#fff}
+.pill.black:hover{background:#2e4163}
+/* hero */
+.hero{padding:88px 64px 0}
+.hero h1{font-weight:400;font-size:112px;line-height:1;letter-spacing:-3px;margin:0}
+.hero h1 mark{background:linear-gradient(transparent 62%,#00ff00 62%,#00ff00 90%,transparent 90%);color:inherit}
+.hero .lede{font-size:24px;line-height:1.4;color:var(--slate);max-width:720px;margin:28px 0 0}
+.hero .over{margin:72px 0 24px;color:var(--slate)}
+.feat{display:grid;grid-template-columns:1.65fr 1fr;gap:48px;align-items:start}
+.fcard{display:block;text-decoration:none}
+.fcard .img{border-radius:16px;overflow:hidden;background:var(--surface)}
+.fcard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.fcard:hover img{transform:scale(1.03)}
+.fcard.big .img{aspect-ratio:16/10}
+.fcard.side .img{aspect-ratio:4/3}
+.meta{display:flex;align-items:center;gap:12px;margin:20px 0 12px;flex-wrap:wrap}
+.chip{font-family:'PT Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:#d2e9e3;color:#2e4163;padding:4px 10px;border-radius:6px}
+.date{font-family:'PT Mono',monospace;font-size:13px;color:var(--slate)}
+.fcard h2{font-size:44px;line-height:1.1;margin:0;letter-spacing:-.5px}
+.fcard.side h2{font-size:30px;line-height:1.15}
+.fcard .rm{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:16px;text-decoration:underline;text-underline-offset:5px}
+.fcard:hover h2{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:#00ff00;text-underline-offset:6px}
+/* all stories */
+.all{padding:120px 64px 104px}
+.all h2.t{font-weight:400;font-size:64px;letter-spacing:-1.5px;margin:0 0 32px}
+.bar{display:flex;align-items:center;gap:16px;padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:48px;position:relative}
+.fbtn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid #000;border-radius:10px;background:#fff;font:inherit;font-size:16px;cursor:pointer}
+.fbtn svg{transition:transform .2s}
+.fbtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.fpanel{position:absolute;top:56px;left:0;z-index:5;width:340px;background:#fff;border:1px solid #000;border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(46,65,99,.18);display:none}
+.fpanel.is-open{display:block}
+.fpanel button{display:flex;justify-content:space-between;width:100%;min-height:44px;align-items:center;padding:0 14px;border:0;background:none;font:inherit;font-size:16px;border-radius:8px;cursor:pointer;text-align:left}
+.fpanel button:hover{background:var(--surface)}
+.fpanel button[aria-pressed="true"]{background:#000;color:#fff}
+.fpanel .n{font-family:'PT Mono',monospace;font-size:13px}
+.seg{display:inline-flex;border:1px solid #000;border-radius:10px;overflow:hidden}
+.seg button{min-height:44px;padding:0 16px;border:0;border-right:1px solid #000;background:#fff;font:inherit;font-size:15px;cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:#000;color:#00ff00}
+.search{margin-left:auto;display:flex;align-items:center;gap:10px;border:1px solid #000;border-radius:10px;min-height:44px;padding:0 14px;width:340px}
+.search input{border:0;font:inherit;font-size:16px;flex:1;outline:none;background:none;min-width:0}
+.search:focus-within{outline:3px solid #2e4163;outline-offset:2px}
+.status{font-family:'PT Mono',monospace;font-size:13px;color:var(--slate);margin:-28px 0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 36px}
+.card{display:block;text-decoration:none}
+.card .img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--surface)}
+.card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card .img.is-contain img{object-fit:contain;padding:18px;box-sizing:border-box;background:#fff}
+.card:hover img{transform:scale(1.03)}
+.card h3{font-size:25px;line-height:1.2;margin:0}
+.card:hover h3{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:#00ff00;text-underline-offset:5px}
+.card .rm{display:inline-block;margin-top:14px;font-size:15px;text-decoration:underline;text-underline-offset:5px}
+.empty{grid-column:1/-1;padding:48px;border:1px dashed #988F8F;border-radius:12px;font-size:18px}
+.more{display:flex;justify-content:center;margin-top:64px}
+.more .pill{background:#fff;border:1px solid #000;color:#000}
+.more .pill:hover{background:#000;color:#fff}
+/* go deeper */
+.deeper{background:#2b675b;color:#fff;padding:96px 64px;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.deeper .over{color:#d2e9e3;margin:0 0 20px}
+.deeper h2{font-size:56px;line-height:1.05;letter-spacing:-1px;margin:0;font-weight:400}
+.deeper p{font-size:20px;line-height:1.5;color:#d2e9e3;margin:24px 0 36px;max-width:560px}
+.deeper .acts{display:flex;gap:14px;flex-wrap:wrap}
+.pill.white{background:#fff;color:#2b675b}
+.pill.white:hover{background:#d2e9e3}
+.pill.ghost{background:none;color:#fff;box-shadow:inset 0 0 0 1px #fff}
+.pill.ghost:hover{background:#fff;color:#2b675b}
+.deeper :focus-visible{outline-color:#00ff00}
+.deeper img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+
+/* part: site-footer · master: abigail1-a · Mobile · Part 2 */
+.site-foot{background:#000;color:#fff;font-family:'PT Sans',sans-serif;padding:64px 64px 40px}
+.site-foot .sf-in{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;max-width:1312px;margin:0 auto}
+.site-foot .sf-brand img{display:block;width:150px;height:auto;margin-bottom:20px}
+.site-foot .sf-brand p,.site-foot .sf-col li{margin:0;font-size:15px;line-height:1.7;color:#d2e9e3}
+.site-foot .sf-col h2{font-family:'PT Mono',monospace;font-weight:400;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#988F8F;margin:0 0 14px}
+.site-foot .sf-col ul{list-style:none;margin:0;padding:0}
+.site-foot a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;min-height:28px}
+.site-foot a:hover{text-decoration:underline;text-decoration-color:#00ff00;text-underline-offset:4px}
+.site-foot a:focus-visible{outline:2px solid #00ff00;outline-offset:3px}
+.site-foot .sf-base{max-width:1312px;margin:48px auto 0;padding-top:24px;border-top:1px solid #2e4163;display:flex;justify-content:space-between;gap:24px;font-size:14px;color:#988F8F}
+/* /part: site-footer */
+@media (prefers-reduced-motion: reduce){.page *,.page *::before,.page *::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}}
+/* ---- phone layout (390 px) ---- */
+.page{overflow:clip}
+.page .bh{height:64px;padding:0 16px;gap:12px}
+.page .bh .home img{width:104px;height:25px}
+.page .bh nav,.page .bh .ext{display:none}
+.page .bh .right{gap:8px}
+.page .bh .pill.black{min-height:44px;padding:0 16px;font-size:15px}
+/* shared footer at phone width */
+.page .site-foot{padding:48px 16px 32px}
+.page .site-foot .sf-in{grid-template-columns:1fr 1fr;gap:32px 20px}
+.page .site-foot .sf-brand{grid-column:1/-1}
+.page .site-foot a{min-height:44px}
+.page .site-foot .sf-base{flex-direction:column;gap:8px;margin-top:32px}
+/* canvas-only: labels and chip at phone width */
+.page .hero{padding:32px 16px 0}
+.page .hero h1{font-size:58px;letter-spacing:-1.5px;line-height:1}
+.page .hero .lede{font-size:19px;margin-top:20px}
+.page .hero .over{margin:48px 0 18px}
+.page .feat{grid-template-columns:1fr;gap:48px}
+.page .fcard h2{font-size:30px}
+.page .fcard.side h2{font-size:26px}
+.page .fcard .rm{min-height:44px;margin-top:6px}
+.page .all{padding:80px 16px 72px}
+.page .all h2.t{font-size:42px;margin-bottom:24px}
+.page .bar{flex-wrap:wrap;gap:12px;padding-bottom:20px;margin-bottom:32px}
+.page .search{order:-1;width:100%;margin-left:0;box-sizing:border-box;min-height:48px}
+.page .fbtn{flex:1;min-width:0;justify-content:space-between;min-height:48px;white-space:nowrap;font-size:15px;padding:0 14px}
+.page .seg button{min-height:48px;padding:0 12px}
+.page .fpanel{width:100%;box-sizing:border-box;top:auto;margin-top:0}
+.page .bar .fpanel{top:128px}
+.page .status{margin:-16px 0 24px}
+.page .grid{grid-template-columns:1fr;gap:44px}
+.page .card h3{font-size:23px}
+.page .more{margin-top:48px}
+.page .more .pill{width:100%;justify-content:center;min-height:52px}
+.page .deeper{grid-template-columns:1fr;padding:64px 16px;gap:40px}
+.page .deeper h2{font-size:38px}
+.page .deeper p{font-size:18px}
+.page .deeper .acts a{width:100%;justify-content:center;min-height:52px}
+.page .bh .home{min-height:44px}
+.page .search input{min-height:44px}
+</style>
+</helmet>
+<div class="page">
+<section class="deeper">
+<div><p data-t="t-eb4d3e" class="mono over">Go deeper</p><h2 data-t="t-e97959">See the platform behind the stories</h2><p data-t="t-ff3a67">Watch a recorded webinar, or explore how QualiWare builds a connected model of your organization.</p><div class="acts"><a data-t="t-f57c68" class="pill white" href="https://www.qualiware.com/webinars">Watch recorded webinars</a><a data-t="t-08ea61" class="pill ghost" href="https://www.qualiware.com/digital-twin-of-an-organization">Explore the platform</a></div></div>
+<img src="../../assets/images/photos/people/two-colleagues-at-laptop.png" alt="Two colleagues looking at a laptop together">
+</section>
+<footer class="site-foot-wrap"><div class="site-foot" data-part="site-footer">
+<div class="sf-in">
+<div class="sf-brand"><img src="../../assets/images/brand/qualiware-wordmark-white.svg" alt="QualiWare" width="150" height="36"><p data-t="site-footer-t-d9ec52">QualiWare ApS<br>Ryttermarken 15<br>DK 3520 Farum, Denmark</p></div>
+<div class="sf-col"><h2 data-t="site-footer-t-b37456">Contact</h2><ul><li><a data-t="site-footer-t-e05477" href="tel:+4545470700">+45 45 470 700</a></li><li><a data-t="site-footer-t-933c64" href="mailto:info@qualiware.com">info@qualiware.com</a></li><li><a data-t="site-footer-t-1b42ef" href="mailto:sales@qualiware.com">sales@qualiware.com</a></li></ul></div>
+<div class="sf-col"><h2 data-t="site-footer-t-87df60">Resources</h2><ul><li><a data-t="site-footer-t-7341b4" href="board-09.dc.html" data-goto="Blog overview" onClick="{{navGo}}">QualiWare blog</a></li><li><a data-t="site-footer-t-d7e32b" href="https://www.qualiware.com/webinars">Webinars</a></li><li><a data-t="site-footer-t-1c459b" href="https://www.qualiware.com/gartner">Analyst research</a></li><li><a data-t="site-footer-t-2ec80e" href="https://www.qualiware.com/clients">Customer stories</a></li></ul></div>
+<div class="sf-col"><h2 data-t="site-footer-t-7a1994">Company</h2><ul><li><a data-t="site-footer-t-a83de8" href="https://www.qualiware.com/book-a-demo">Book a demo</a></li><li><a data-t="site-footer-t-01d5a1" href="https://www.qualiware.com/">Terms &amp; conditions</a></li><li><a data-t="site-footer-t-74b548" href="https://www.qualiware.com/">Cookies policy</a></li><li><a data-t="site-footer-t-b65e36" href="https://www.qualiware.com/">Certifications</a></li></ul></div>
+</div>
+<div class="sf-base"><span data-t="site-footer-t-3aaea2">Certified in ISO 27001 · UN Global Compact participant · SKI supplier</span><span data-t="site-footer-t-f63dae">CVR 30731557</span></div>
+</div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"topic":{"editor":"enum","options":["All","News","User Tips","Analyst Recognition","QW Inside","QualiWare CEO Blog Post","France"],"default":"All","section":"Filters (abigail1-a-s2)"},"sort":{"editor":"enum","options":["Newest","Oldest","A–Z"],"default":"Newest","section":"Filters (abigail1-a-s2)"},"topicMenuOpen":{"editor":"boolean","default":false,"section":"Filters (abigail1-a-s2)"},"onGo":{"editor":null},"$preview":{"width":390,"height":1794}}'>
+const POSTS = [{"k": 1, "t": "QualiWare Recognized as a Champion", "c": ["Analyst Recognition"], "d": "2026-08-04", "src": "../../assets/images/illustrations/gold-stars.png", "fit": ""}, {"k": 2, "t": "Why Gartner's First Magic Quadrant for Digital Twin of an Organization Platforms Matters", "c": ["Analyst Recognition"], "d": "2026-07-30", "src": "../../assets/images/restricted/analyst-and-awards/gartner-mq-dto.png", "fit": "is-contain"}, {"k": 3, "t": "What is a Digital Twin of an Organization (DTO)?", "c": ["News"], "d": "2026-07-28", "src": "../../assets/images/illustrations/city-collage-blue.png", "fit": ""}, {"k": 4, "t": "Project Portfolio Management Is About More Than Managing Projects", "c": ["User Tips"], "d": "2026-07-20", "src": "../../assets/images/photos/people/people-reviewing-charts-documents.png", "fit": ""}, {"k": 5, "t": "Own Your Digital Resilience", "c": ["News"], "d": "2026-06-22", "src": "../../assets/images/illustrations/lock-collage-orange.png", "fit": ""}, {"k": 6, "t": "Trends in Enterprise Architecture 2026", "c": ["News"], "d": "2026-06-10", "src": "../../assets/images/photos/people/woman-presenting-with-tablet.png", "fit": ""}, {"k": 7, "t": "QualiWare DTO Manufacturing use case", "c": ["User Tips"], "d": "2026-05-11", "src": "../../assets/images/illustrations/manufacturing-collage.png", "fit": ""}, {"k": 8, "t": "Great Preparedness Day", "c": ["QualiWare CEO Blog Post"], "d": "2026-04-28", "src": "../../assets/images/photos/places/city-copenhagen.jpg", "fit": ""}, {"k": 9, "t": "Build a Digital Twin of an Organization (DTO) in 8–12 weeks", "c": ["User Tips"], "d": "2026-04-14", "src": "../../assets/images/photos/people/team-workshop-sticky-notes-wide.png", "fit": ""}, {"k": 10, "t": "Preparedness and Digital Sovereignty", "c": ["QualiWare CEO Blog Post"], "d": "2026-03-16", "src": "../../assets/images/illustrations/planet-in-space.png", "fit": ""}, {"k": 11, "t": "How QualiWare Empowers Financial Services", "c": ["News"], "d": "2026-03-02", "src": "../../assets/images/photos/places/city-london.jpg", "fit": ""}, {"k": 12, "t": "From Digital Dependency to Digital Sovereignty", "c": ["News"], "d": "2026-02-10", "src": "../../assets/images/illustrations/eye-collage-orange.png", "fit": ""}, {"k": 13, "t": "Our customers named QualiWare a Leader in Enterprise Architecture – again", "c": ["Analyst Recognition"], "d": "2026-01-30", "src": "../../assets/images/restricted/analyst-and-awards/info-tech-2026-leader-ea.png", "fit": "is-contain"}, {"k": 14, "t": "AI Features in QualiWare 10.10", "c": ["User Tips"], "d": "2025-08-19", "src": "../../assets/images/product/screenshots/qualichat.png", "fit": "is-contain"}, {"k": 15, "t": "Gestion du portefeuille informatique avec QualiWare", "c": ["France"], "d": "2023-09-22", "src": "../../assets/images/illustrations/city-collage-violet.png", "fit": ""}];
+const CATS = [{"name": "News", "n": 25}, {"name": "User Tips", "n": 14}, {"name": "Analyst Recognition", "n": 8}, {"name": "QW Inside", "n": 3}, {"name": "QualiWare CEO Blog Post", "n": 2}, {"name": "France", "n": 2}];
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmtDate = (d) => { const [y, m, dd] = d.split('-'); return parseInt(dd, 10) + ' ' + MONTHS[parseInt(m, 10) - 1] + ' ' + y; };
+class Component extends DCLogic {
+tw(name, def) { const p = this.props[name] ?? def; const s = this.state && this.state['tw_' + name]; return (s && s.p === p) ? s.v : p; }
+setTw(name, def, v) { const p = this.props[name] ?? def; this.setState({ ['tw_' + name]: { v, p } }); }
+postList(cat, sort, q) {
+let L = POSTS.filter((p) => (cat === 'All' || p.c.indexOf(cat) >= 0) && (!q || p.t.toLowerCase().indexOf(q.toLowerCase()) >= 0));
+L = L.slice().sort((a, b) => sort === 'Oldest' ? a.d.localeCompare(b.d) : sort === 'A–Z' ? a.t.localeCompare(b.t) : b.d.localeCompare(a.d));
+return L.map((p) => Object.assign({}, p, { date: fmtDate(p.d), cat: p.c.join(' · '), cats: p.c }));
+}
+// page links (links.py)
+goVals() {
+return { navGo: (e) => {
+if (typeof this.closeMenus === 'function') this.closeMenus();
+const h = e.currentTarget.getAttribute('href') || '';
+if (!/\.dc\.html$/.test(h)) { if (h === '#' || h === '') e.preventDefault(); return; }
+if (typeof this.props.onGo === 'function') { e.preventDefault(); this.props.onGo(h.replace(/\.dc\.html$/, '')); }
+} };
+}
+renderVals() {
+const v = { labelsClass: (this.props.showSectionLabels ?? true) ? 'labels-on' : 'labels-off' };
+const cat = this.tw('topic', 'All');
+const sort = this.tw('sort', 'Newest');
+const open = this.tw('topicMenuOpen', false);
+const q = (this.state && this.state.q) || '';
+const more = !!(this.state && this.state.more);
+const L = this.postList(cat, sort, q);
+const pick = (c) => { this.setTw('topic', 'All', c); this.setTw('topicMenuOpen', false, false); this.setState({ more: false }); };
+v.catLabel = cat === 'All' ? 'All topics' : cat;
+v.catBtns = [{ name: 'All', n: 54, on: cat === 'All' ? 'true' : 'false' }].concat(CATS.map((c) => ({ name: c.name, n: c.n, on: cat === c.name ? 'true' : 'false' })));
+v.pickCat = (e) => pick(e.currentTarget.getAttribute('data-cat'));
+v.fExp = open ? 'true' : 'false'; v.fOn = open ? 'is-open' : '';
+v.toggleFilter = () => this.setTw('topicMenuOpen', false, !open);
+v.barKeys = (e) => { if (e.key === 'Escape' && open) this.setTw('topicMenuOpen', false, false); };
+v.navAll = cat === 'All' ? 'true' : 'false'; v.navTips = cat === 'User Tips' ? 'true' : 'false'; v.navNews = cat === 'News' ? 'true' : 'false'; v.navAnalyst = cat === 'Analyst Recognition' ? 'true' : 'false';
+v.pickAll = () => pick('All'); v.pickTips = () => pick('User Tips'); v.pickNews = () => pick('News'); v.pickAnalyst = () => pick('Analyst Recognition');
+v.sNew = sort === 'Newest' ? 'true' : 'false'; v.sOld = sort === 'Oldest' ? 'true' : 'false'; v.sAz = sort === 'A–Z' ? 'true' : 'false';
+v.sortNew = () => this.setTw('sort', 'Newest', 'Newest'); v.sortOld = () => this.setTw('sort', 'Newest', 'Oldest'); v.sortAz = () => this.setTw('sort', 'Newest', 'A–Z');
+v.q = q; v.onSearch = (e) => this.setState({ q: e.target.value, more: false });
+v.shown = more ? L : L.slice(0, 9);
+v.hasMore = !more && L.length > 9;
+v.none = L.length === 0;
+v.showMore = () => this.setState({ more: true });
+v.status = (cat === 'All' ? 'All topics' : cat) + ' · ' + (sort === 'A–Z' ? 'A to Z' : sort === 'Oldest' ? 'oldest first' : 'newest first') + (q ? ' · matching “' + q + '”' : '');
+Object.assign(v, this.goVals());
+return v;
+}
+}
+</script>
+</body>
+</html>

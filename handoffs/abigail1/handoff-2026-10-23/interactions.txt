@@ -1,0 +1,64 @@
+abigail1-a · Library: interactive elements by section
+
+abigail1-a-s1 · Hero and featured
+  link      “QualiWare blog, all stories”                                → Blog overview (abigail1-a · Library)
+  button    “All stories”                                                runs pickAll
+  button    “User tips”                                                  runs pickTips
+  button    “News”                                                       runs pickNews
+  button    “Analyst recognition”                                        runs pickAnalyst
+  link      “qualiware.com”                                              → https://www.qualiware.com/
+  link      “Watch webinars”                                             → https://www.qualiware.com/webinars
+  link      “What is a Digital Twin of an Organization (DTO)?”           → Blog post (abigail1-g · Figma-style post)
+  link      “QualiWare Recognized as a Champion”                         → Blog post (abigail1-g · Figma-style post)
+
+abigail1-a-s2 · All stories
+  button    “Topic: {{catLabel}}”                                        opens/closes #topic-panel (toggleFilter)
+  button    “{{ c.name }} {{ c.n }}”                                     runs pickCat
+  button    “Newest”                                                     runs sortNew
+  button    “Oldest”                                                     runs sortOld
+  button    “A–Z”                                                        runs sortAz
+  field     “Search stories”                                             search field
+  link      “{{ p.t }}”                                                  → Blog post (abigail1-g · Figma-style post)
+  button    “Load more stories”                                          runs showMore
+
+abigail1-a-s3 · Go deeper
+  link      “Watch recorded webinars”                                    → https://www.qualiware.com/webinars
+  link      “Explore the platform”                                       → https://www.qualiware.com/digital-twin-of-an-organization
+
+abigail1-a-s4 · Main site footer
+  link      “+45 45 470 700”                                             → tel:+4545470700  [part: site-footer]
+  link      “info@qualiware.com”                                         → mailto:info@qualiware.com  [part: site-footer]
+  link      “sales@qualiware.com”                                        → mailto:sales@qualiware.com  [part: site-footer]
+  link      “QualiWare blog”                                             → Blog overview (abigail1-a · Library)  [part: site-footer]
+  link      “Webinars”                                                   → https://www.qualiware.com/webinars  [part: site-footer]
+  link      “Analyst research”                                           → https://www.qualiware.com/gartner  [part: site-footer]
+  link      “Customer stories”                                           → https://www.qualiware.com/clients  [part: site-footer]
+  link      “Book a demo”                                                → https://www.qualiware.com/book-a-demo  [part: site-footer]
+  link      “Terms & conditions”                                         → https://www.qualiware.com/  [part: site-footer]
+  link      “Cookies policy”                                             → https://www.qualiware.com/  [part: site-footer]
+  link      “Certifications”                                             → https://www.qualiware.com/  [part: site-footer]
+
+abigail1-a · Mobile: interactive elements by section
+
+abigail1-a-s1 · Hero and featured · Mobile
+  link      “QualiWare blog, all stories”                                → Blog overview (abigail1-a · Mobile)
+  button    “All stories”                                                runs pickAll
+  button    “User tips”                                                  runs pickTips
+  button    “News”                                                       runs pickNews
+  button    “Analyst recognition”                                        runs pickAnalyst
+  link      “qualiware.com”                                              → https://www.qualiware.com/
+  link      “Watch webinars”                                             → https://www.qualiware.com/webinars
+  link      “What is a Digital Twin of an Organization (DTO)?”           → Blog post (abigail1-g · Mobile)
+  link      “QualiWare Recognized as a Champion”                         → Blog post (abigail1-g · Mobile)
+
+abigail1-a-s2 · All stories · Mobile
+  button    “Topic: {{catLabel}}”                                        opens/closes #topic-panel (toggleFilter)
+  button    “{{ c.name }} {{ c.n }}”                                     runs pickCat
+  button    “Newest”                                                     runs sortNew
+  button    “Oldest”                                                     runs sortOld
+  button    “A–Z”                                                        runs sortAz
+  field     “Search stories”                                             search field
+  link      “{{ p.t }}”                                                  → Blog post (abigail1-g · Mobile)
+  button    “Load more stories”                                          runs showMore
+
+Every element has a destination or behaviour.

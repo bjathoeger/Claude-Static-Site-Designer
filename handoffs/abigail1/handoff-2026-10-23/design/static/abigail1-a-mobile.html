@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>abigail1-a · Mobile</title>
+<!-- Static export of the canvas artboard "abigail1-a · Mobile" for the build: the default state at 390 px, canvas annotations removed. Behaviour is described in handoff.json and design/source/abigail1-a-mobile.dc.html. -->
+<style>
+
+@font-face{font-family:'PT Sans';src:url(../../assets/fonts/pt-sans/PTSans-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Sans';src:url(../../assets/fonts/pt-sans/PTSans-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Sans';src:url(../../assets/fonts/pt-sans/PTSans-Italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'PT Sans Narrow';src:url(../../assets/fonts/pt-sans-narrow/PTSansNarrow-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Mono';src:url(../../assets/fonts/pt-mono/PTMono-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Serif';src:url(../../assets/fonts/pt-serif/PTSerif-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'PT Serif';src:url(../../assets/fonts/pt-serif/PTSerif-Italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'PT Serif';src:url(../../assets/fonts/pt-serif/PTSerif-Bold.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+body{margin:0}
+.page{position:relative}
+.page > section,.page > footer,.page > div{position:relative}
+
+.page{background:#fff;color:#000;font-family:'PT Sans',sans-serif;--line:#e3f1ee;--surface:#f3f9f7;--slate:#525c72}
+.page a{color:inherit}
+.page :focus-visible{outline:3px solid #2e4163;outline-offset:3px;border-radius:4px}
+.mono{font-family:'PT Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* blog header */
+.bh{display:flex;align-items:center;gap:32px;height:76px;padding:0 64px;border-bottom:1px solid var(--line)}
+.bh .home{display:flex;align-items:center;gap:14px;text-decoration:none}
+.bh .home img{width:126px;height:30px;display:block}
+.bh .home .tag{font-family:'PT Mono',monospace;font-size:14px;border:1px solid #000;border-radius:999px;padding:3px 12px}
+.bh nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.bh nav button{font:inherit;font-size:16px;background:none;border:0;padding:10px 14px;border-radius:999px;cursor:pointer;color:#000}
+.bh nav button:hover{background:var(--surface)}
+.bh nav button[aria-pressed="true"]{background:#000;color:#fff}
+.bh .right{margin-left:auto;display:flex;align-items:center;gap:20px}
+.bh .ext{font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:40px}
+.bh .ext:hover{text-decoration:underline}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;border:0;font-family:inherit;transition:background .2s,color .2s}
+.pill.black{background:#000;color:#fff}
+.pill.black:hover{background:#2e4163}
+/* hero */
+.hero{padding:88px 64px 0}
+.hero h1{font-weight:400;font-size:112px;line-height:1;letter-spacing:-3px;margin:0}
+.hero h1 mark{background:linear-gradient(transparent 62%,#00ff00 62%,#00ff00 90%,transparent 90%);color:inherit}
+.hero .lede{font-size:24px;line-height:1.4;color:var(--slate);max-width:720px;margin:28px 0 0}
+.hero .over{margin:72px 0 24px;color:var(--slate)}
+.feat{display:grid;grid-template-columns:1.65fr 1fr;gap:48px;align-items:start}
+.fcard{display:block;text-decoration:none}
+.fcard .img{border-radius:16px;overflow:hidden;background:var(--surface)}
+.fcard img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.fcard:hover img{transform:scale(1.03)}
+.fcard.big .img{aspect-ratio:16/10}
+.fcard.side .img{aspect-ratio:4/3}
+.meta{display:flex;align-items:center;gap:12px;margin:20px 0 12px;flex-wrap:wrap}
+.chip{font-family:'PT Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:#d2e9e3;color:#2e4163;padding:4px 10px;border-radius:6px}
+.date{font-family:'PT Mono',monospace;font-size:13px;color:var(--slate)}
+.fcard h2{font-size:44px;line-height:1.1;margin:0;letter-spacing:-.5px}
+.fcard.side h2{font-size:30px;line-height:1.15}
+.fcard .rm{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:16px;text-decoration:underline;text-underline-offset:5px}
+.fcard:hover h2{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:#00ff00;text-underline-offset:6px}
+/* all stories */
+.all{padding:120px 64px 104px}
+.all h2.t{font-weight:400;font-size:64px;letter-spacing:-1.5px;margin:0 0 32px}
+.bar{display:flex;align-items:center;gap:16px;padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:48px;position:relative}
+.fbtn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;border:1px solid #000;border-radius:10px;background:#fff;font:inherit;font-size:16px;cursor:pointer}
+.fbtn svg{transition:transform .2s}
+.fbtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.fpanel{position:absolute;top:56px;left:0;z-index:5;width:340px;background:#fff;border:1px solid #000;border-radius:12px;padding:8px;box-shadow:0 18px 40px rgba(46,65,99,.18);display:none}
+.fpanel.is-open{display:block}
+.fpanel button{display:flex;justify-content:space-between;width:100%;min-height:44px;align-items:center;padding:0 14px;border:0;background:none;font:inherit;font-size:16px;border-radius:8px;cursor:pointer;text-align:left}
+.fpanel button:hover{background:var(--surface)}
+.fpanel button[aria-pressed="true"]{background:#000;color:#fff}
+.fpanel .n{font-family:'PT Mono',monospace;font-size:13px}
+.seg{display:inline-flex;border:1px solid #000;border-radius:10px;overflow:hidden}
+.seg button{min-height:44px;padding:0 16px;border:0;border-right:1px solid #000;background:#fff;font:inherit;font-size:15px;cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:#000;color:#00ff00}
+.search{margin-left:auto;display:flex;align-items:center;gap:10px;border:1px solid #000;border-radius:10px;min-height:44px;padding:0 14px;width:340px}
+.search input{border:0;font:inherit;font-size:16px;flex:1;outline:none;background:none;min-width:0}
+.search:focus-within{outline:3px solid #2e4163;outline-offset:2px}
+.status{font-family:'PT Mono',monospace;font-size:13px;color:var(--slate);margin:-28px 0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 36px}
+.card{display:block;text-decoration:none}
+.card .img{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--surface)}
+.card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card .img.is-contain img{object-fit:contain;padding:18px;box-sizing:border-box;background:#fff}
+.card:hover img{transform:scale(1.03)}
+.card h3{font-size:25px;line-height:1.2;margin:0}
+.card:hover h3{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:#00ff00;text-underline-offset:5px}
+.card .rm{display:inline-block;margin-top:14px;font-size:15px;text-decoration:underline;text-underline-offset:5px}
+.empty{grid-column:1/-1;padding:48px;border:1px dashed #988F8F;border-radius:12px;font-size:18px}
+.more{display:flex;justify-content:center;margin-top:64px}
+.more .pill{background:#fff;border:1px solid #000;color:#000}
+.more .pill:hover{background:#000;color:#fff}
+/* go deeper */
+.deeper{background:#2b675b;color:#fff;padding:96px 64px;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.deeper .over{color:#d2e9e3;margin:0 0 20px}
+.deeper h2{font-size:56px;line-height:1.05;letter-spacing:-1px;margin:0;font-weight:400}
+.deeper p{font-size:20px;line-height:1.5;color:#d2e9e3;margin:24px 0 36px;max-width:560px}
+.deeper .acts{display:flex;gap:14px;flex-wrap:wrap}
+.pill.white{background:#fff;color:#2b675b}
+.pill.white:hover{background:#d2e9e3}
+.pill.ghost{background:none;color:#fff;box-shadow:inset 0 0 0 1px #fff}
+.pill.ghost:hover{background:#fff;color:#2b675b}
+.deeper :focus-visible{outline-color:#00ff00}
+.deeper img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+
+@media (prefers-reduced-motion: reduce){.page *,.page *::before,.page *::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}}
+/* ---- phone layout (390 px) ---- */
+.page{overflow:clip}
+.page .bh{height:64px;padding:0 16px;gap:12px}
+.page .bh .home img{width:104px;height:25px}
+.page .bh nav,.page .bh .ext{display:none}
+.page .bh .right{gap:8px}
+.page .bh .pill.black{min-height:44px;padding:0 16px;font-size:15px}
+/* shared footer at phone width */
+.page .site-foot{padding:48px 16px 32px}
+.page .site-foot .sf-in{grid-template-columns:1fr 1fr;gap:32px 20px}
+.page .site-foot .sf-brand{grid-column:1/-1}
+.page .site-foot a{min-height:44px}
+.page .site-foot .sf-base{flex-direction:column;gap:8px;margin-top:32px}
+/* canvas-only: labels and chip at phone width */
+.page .hero{padding:32px 16px 0}
+.page .hero h1{font-size:58px;letter-spacing:-1.5px;line-height:1}
+.page .hero .lede{font-size:19px;margin-top:20px}
+.page .hero .over{margin:48px 0 18px}
+.page .feat{grid-template-columns:1fr;gap:48px}
+.page .fcard h2{font-size:30px}
+.page .fcard.side h2{font-size:26px}
+.page .fcard .rm{min-height:44px;margin-top:6px}
+.page .all{padding:80px 16px 72px}
+.page .all h2.t{font-size:42px;margin-bottom:24px}
+.page .bar{flex-wrap:wrap;gap:12px;padding-bottom:20px;margin-bottom:32px}
+.page .search{order:-1;width:100%;margin-left:0;box-sizing:border-box;min-height:48px}
+.page .fbtn{flex:1;min-width:0;justify-content:space-between;min-height:48px;white-space:nowrap;font-size:15px;padding:0 14px}
+.page .seg button{min-height:48px;padding:0 12px}
+.page .fpanel{width:100%;box-sizing:border-box;top:auto;margin-top:0}
+.page .bar .fpanel{top:128px}
+.page .status{margin:-16px 0 24px}
+.page .grid{grid-template-columns:1fr;gap:44px}
+.page .card h3{font-size:23px}
+.page .more{margin-top:48px}
+.page .more .pill{width:100%;justify-content:center;min-height:52px}
+.page .deeper{grid-template-columns:1fr;padding:64px 16px;gap:40px}
+.page .deeper h2{font-size:38px}
+.page .deeper p{font-size:18px}
+.page .deeper .acts a{width:100%;justify-content:center;min-height:52px}
+.page .bh .home{min-height:44px}
+.page .search input{min-height:44px}
+
+</style>
+</head>
+<body>
+<div class="page"><header class="bh"><a class="home" href="./" data-goto="Blog overview" aria-label="QualiWare blog, all stories" data-i18n-aria-label="a_eb3bf5"><img src="../../assets/images/brand/qualiware-wordmark-black.svg" alt="QualiWare" data-i18n-alt="site_footer_a_bd6905"><span class="tag" data-i18n="t-0b9d2b">Blog</span></a><nav aria-label="Blog topics" data-i18n-aria-label="a_aaabfc"><ul><li><button type="button" aria-pressed="true" data-i18n="t-e3021f">All stories</button></li><li><button type="button" aria-pressed="false" data-i18n="t-246f8c">User tips</button></li><li><button type="button" aria-pressed="false" data-i18n="t-34c808">News</button></li><li><button type="button" aria-pressed="false" data-i18n="t-d2d2fa">Analyst recognition</button></li></ul></nav><div class="right"><a class="ext" href="https://www.qualiware.com/" data-i18n="t-036ed7">qualiware.com <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg></a><a class="pill black" href="https://www.qualiware.com/webinars" data-i18n="t-c79d89">Watch webinars</a></div></header><section class="hero"><h1 data-i18n="t-148f47">The QualiWare <mark>blog</mark></h1><p class="lede" data-i18n="t-ae21a4">Stories that show the platform at work, and how we keep up with the challenges enterprise architects face.</p><p class="mono over" data-i18n="t-0224c2">Featured stories</p><div class="feat"><a class="fcard big" href="blog-post/" data-goto="Blog post"><div class="img"><img src="../../assets/images/illustrations/city-collage-blue.png" alt=""></div><div class="meta"><span class="chip" data-i18n="t-34c808-2">News</span><span class="date" data-i18n="t-6e8748">28 Jul 2026</span></div><h2 data-i18n="t-7be132">What is a Digital Twin of an Organization (DTO)?</h2><span class="rm"><span data-i18n="w-e553fe">Read story</span> <span aria-hidden="true">→</span></span></a><a class="fcard side" href="blog-post/" data-goto="Blog post"><div class="img"><img src="../../assets/images/illustrations/gold-stars.png" alt=""></div><div class="meta"><span class="chip" data-i18n="t-2120ab">Analyst Recognition</span><span class="date" data-i18n="t-66b02c">4 Aug 2026</span></div><h2 data-i18n="t-4238e7">QualiWare Recognized as a Champion</h2><span class="rm"><span data-i18n="w-e553fe-2">Read story</span> <span aria-hidden="true">→</span></span></a></div></section><section class="all" id="all-stories"><h2 class="t" data-i18n="t-e3021f-2">All stories</h2><div class="bar"><button type="button" class="fbtn" aria-expanded="false" aria-controls="topic-panel">Topic: <span class="sc-interp">All topics</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button><div class="fpanel " id="topic-panel"><button type="button" aria-pressed="true" data-cat="All"><span><span class="sc-interp">All</span></span><span class="n"><span class="sc-interp">54</span></span></button><button type="button" aria-pressed="false" data-cat="News"><span><span class="sc-interp">News</span></span><span class="n"><span class="sc-interp">25</span></span></button><button type="button" aria-pressed="false" data-cat="User Tips"><span><span class="sc-interp">User Tips</span></span><span class="n"><span class="sc-interp">14</span></span></button><button type="button" aria-pressed="false" data-cat="Analyst Recognition"><span><span class="sc-interp">Analyst Recognition</span></span><span class="n"><span class="sc-interp">8</span></span></button><button type="button" aria-pressed="false" data-cat="QW Inside"><span><span class="sc-interp">QW Inside</span></span><span class="n"><span class="sc-interp">3</span></span></button><button type="button" aria-pressed="false" data-cat="QualiWare CEO Blog Post"><span><span class="sc-interp">QualiWare CEO Blog Post</span></span><span class="n"><span class="sc-interp">2</span></span></button><button type="button" aria-pressed="false" data-cat="France"><span><span class="sc-interp">France</span></span><span class="n"><span class="sc-interp">2</span></span></button></div><div class="seg" role="group" aria-label="Sort stories" data-i18n-aria-label="a_e605bf"><button type="button" aria-pressed="true" data-i18n="t-d04428">Newest</button><button type="button" aria-pressed="false" data-i18n="t-c47bb8">Oldest</button><button type="button" aria-pressed="false" data-i18n="t-20ec7e">A–Z</button></div><label class="search"><span class="sr" data-i18n="t-b1112c">Search stories</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg><input type="search" placeholder="Search stories" value="" data-i18n-placeholder="a_b1112c"></label></div><p class="status" aria-live="polite"><span class="sc-interp">All topics · newest first</span></p><div class="grid"><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/illustrations/gold-stars.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">Analyst Recognition</span></span><span class="date"><span class="sc-interp">4 Aug 2026</span></span></div><h3><span class="sc-interp">QualiWare Recognized as a Champion</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img is-contain"><img src="../../assets/images/restricted/analyst-and-awards/gartner-mq-dto.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">Analyst Recognition</span></span><span class="date"><span class="sc-interp">30 Jul 2026</span></span></div><h3><span class="sc-interp">Why Gartner's First Magic Quadrant for Digital Twin of an Organization Platforms Matters</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/illustrations/city-collage-blue.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">News</span></span><span class="date"><span class="sc-interp">28 Jul 2026</span></span></div><h3><span class="sc-interp">What is a Digital Twin of an Organization (DTO)?</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/photos/people/people-reviewing-charts-documents.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">User Tips</span></span><span class="date"><span class="sc-interp">20 Jul 2026</span></span></div><h3><span class="sc-interp">Project Portfolio Management Is About More Than Managing Projects</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/illustrations/lock-collage-orange.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">News</span></span><span class="date"><span class="sc-interp">22 Jun 2026</span></span></div><h3><span class="sc-interp">Own Your Digital Resilience</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/photos/people/woman-presenting-with-tablet.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">News</span></span><span class="date"><span class="sc-interp">10 Jun 2026</span></span></div><h3><span class="sc-interp">Trends in Enterprise Architecture 2026</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/illustrations/manufacturing-collage.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">User Tips</span></span><span class="date"><span class="sc-interp">11 May 2026</span></span></div><h3><span class="sc-interp">QualiWare DTO Manufacturing use case</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/photos/places/city-copenhagen.jpg" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">QualiWare CEO Blog Post</span></span><span class="date"><span class="sc-interp">28 Apr 2026</span></span></div><h3><span class="sc-interp">Great Preparedness Day</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a><a class="card" href="blog-post/" data-goto="Blog post"><div class="img "><img src="../../assets/images/photos/people/team-workshop-sticky-notes-wide.png" alt=""></div><div class="meta"><span class="chip"><span class="sc-interp">User Tips</span></span><span class="date"><span class="sc-interp">14 Apr 2026</span></span></div><h3><span class="sc-interp">Build a Digital Twin of an Organization (DTO) in 8–12 weeks</span></h3><span class="rm" data-i18n="t-e553fe">Read story</span></a></div><div class="more"><button type="button" class="pill">Load more stories</button></div></section></div>
+</body>
+</html>

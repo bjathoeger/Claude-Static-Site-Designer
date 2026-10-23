@@ -1,0 +1,2541 @@
+{
+ "format": "content-site-handoff/1",
+ "created": "2026-10-23T10:49:42+00:00",
+ "brief": {
+  "id": "abigail1",
+  "file": "abigail-qualiware-blog-site-brief-1.md",
+  "copy": "brief/abigail-qualiware-blog-site-brief-1.md"
+ },
+ "canvas": {
+  "title": "abigail1 · QualiWare blog canvas",
+  "url": "https://claude.ai/artifact/EDZaNwAzHXdZQXus565dwk"
+ },
+ "approved": true,
+ "override": null,
+ "blockers": [],
+ "notes": [
+  "abigail1-a · Library: console errors while rendering: console: Failed to load resource: the server responded with a status of 404 (Not Found)",
+  "abigail1-a · Mobile: console errors while rendering: console: Failed to load resource: the server responded with a status of 404 (Not Found)"
+ ],
+ "site": {
+  "home": "Blog overview",
+  "pages": [
+   {
+    "name": "Blog overview",
+    "route": "",
+    "in_this_handoff": true
+   },
+   {
+    "name": "Blog post",
+    "route": "blog-post/",
+    "in_this_handoff": false
+   }
+  ]
+ },
+ "page": {
+  "name": "Blog overview",
+  "route": "",
+  "lead": "abigail1-a · Library",
+  "desktop_width": 1440,
+  "phone_width": 390
+ },
+ "languages": {
+  "source": "en",
+  "names": {
+   "en": "English"
+  },
+  "complete": {
+   "en": true
+  },
+  "files": {
+   "en": "i18n/en.json"
+  },
+  "translations": "machine-drafted by Claude, not reviewed by a native speaker"
+ },
+ "artboards": [
+  {
+   "title": "abigail1-a · Library",
+   "kind": "lead",
+   "slug": "abigail1-a",
+   "width": 1440,
+   "height": 4244,
+   "source": "design/source/abigail1-a.dc.html",
+   "static": "design/static/abigail1-a.html",
+   "screenshots": {
+    "en": "screenshots/abigail1-a.en.png"
+   },
+   "languages": [
+    "en"
+   ],
+   "handoff_comment": "brief: abigail-qualiware-blog-site-brief-1.md, ID abigail1 (Content Site - Brief Generator v1). Blog overview, direction \"Library\": a light, index-like library inspired by the Figma resource library the user pointed to (huge plain title, mono overlines, a big featured pair, then a filterable grid). Made 22 Oct at the user's request, one of three overview directions.\nsections (in order):\n  · header.bh (belongs to s1): the blog's own header, not the main site's menu: wordmark + \"Blog\" tag (link to the overview), topic shortcuts as buttons (All stories, User tips, News, Analyst recognition) that set the topic filter below (aria-pressed), a link back to qualiware.com and a black \"Watch webinars\" pill.\n  · s1 Hero and featured: h1 112px PT Sans Regular with \"blog\" highlighted by a QW Green marker band behind black text; lede; \"Featured stories\" (PT Mono); two featured cards (16:10 big, 4:3 side): image, category chip, date, title, \"Read story\" link. Whole card is one link to the post page.\n  · s2 All stories: h2; tool bar with the Topic filter (a button opening a panel of topics with post counts; Escape closes; the panel is open/closed with a tweak too), Sort (Newest, Oldest, A–Z; aria-pressed), and Search (live, by title). Status line (aria-live) says what is shown. 3-column grid of cards: 4:3 image (radius 12; analyst and screenshot images contained on white), category chips, date, title, \"Read story\". 9 cards, then \"Load more stories\". Empty state text when nothing matches. Hover: image scales 1.03 over .5s, title gets a QW Green underline.\n  · s3 Go deeper: Dark Green band with the lead step: \"Watch recorded webinars\" and \"Explore the platform\" (the DTO page), and a photo.\n  · s4 Main site footer: stands for qualiware.com's own footer, which the blog reuses (the brief leaves it out on purpose); drawn only so the page is complete. Do not design or build it from here.\ndata: the prototype holds 15 of the 54 posts on the current blog (qualiware.com/blogs), with their real titles, dates and images chosen from the images folder. The category of each post is an assumption (the current blog shows tags on posts, not categories); the counts per category are the current blog's. Filtering, sorting and search work in Play on these 15.\nfonts used: PT Sans 400/700 (dominant), PT Mono (overlines, chips, dates).\nderived colours (design guide § 2; hex = recipe · role): #e3f1ee = 62% Ice Blue + white · dividers (--line); #f3f9f7 = 27% Ice Blue + white · hover backgrounds, image wells (--surface); #525c72 = 66% Dark Blue + 34% Dark Grey · secondary text (--slate). Dark Blue at 18% for the panel shadow.\nimages (paths relative to images/): brand/qualiware-wordmark-black.svg, brand/qualiware-wordmark-white.svg (footer), illustrations/city-collage-blue.png, illustrations/gold-stars.png, photos/people/two-colleagues-at-laptop.png, and per post: illustrations/city-collage-blue.png, illustrations/city-collage-violet.png, illustrations/eye-collage-orange.png, illustrations/gold-stars.png, illustrations/lock-collage-orange.png, illustrations/manufacturing-collage.png, illustrations/planet-in-space.png, photos/people/people-reviewing-charts-documents.png, photos/people/team-workshop-sticky-notes-wide.png, photos/people/woman-presenting-with-tablet.png, photos/places/city-copenhagen.jpg, photos/places/city-london.jpg, product/screenshots/qualichat.png, restricted/analyst-and-awards/gartner-mq-dto.png, restricted/analyst-and-awards/info-tech-2026-leader-ea.png. The two analyst images (restricted/analyst-and-awards/) are used only on Analyst Recognition posts, as the design guide allows. Card images are decorative (alt=\"\"): the title follows.\naccessibility: contrast checked to WCAG 2.1 AA; the topic panel is a disclosure (aria-expanded, aria-controls, Escape); sort buttons and topic shortcuts use aria-pressed; the search field has a label; focus rings 3px Dark Blue (QW Green on Dark Green and black); hover motion is off under prefers-reduced-motion.\nannotations: the bright red .sec-tag chips (#e60000, deliberately outside the brand palette) are canvas-only section labels for feedback, named <brief ID>-<artboard letter>-s<n> (e.g. \"abigail1-a-s1\"); sections are numbered in page order and renumber when a section is added, removed or moved, and artboard letters close up when an artboard is deleted; they are toggled by the \"Show section labels\" tweak, and clicking one in Play mode copies its name to the clipboard. Do NOT build them (nor the copy script).\nprototype: links name their website page in data-goto (data-goto-else: the page to use until it exists): build each to that page's URL. The hrefs to board-NN.dc.html, onClick=\"{{navGo}}\", goVals() and the onGo prop are canvas-only wiring for Play and previews: do NOT build them. Shared part site-footer (data-part): build it once, as one component on every page that has it; values set outside its markers are per page.\nartboard role (canvas-only): Tweaks › Artboard › Role sets Lead, Alternative or Reference; the chip at the top-left shows the canvas page and the role. Only a page's Lead and its State artboards are built. Annotation only: do NOT build the chip.\nsection status (canvas-only): every section has a Tweaks group named after its label with seven toggles (Copy, Media, Interactions, Mobile, Motion, Translated, Tested); the red label shows \"In development · n/7\" until all seven are on, then \"Approved\". Annotation only: do NOT build.",
+   "sections": [
+    {
+     "index": 0,
+     "name": "abigail1-a-s1 · Hero and featured (its header)",
+     "tag": "header",
+     "class": "bh",
+     "id": "",
+     "top": 0,
+     "height": 77,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": true,
+     "fingerprint": "d38e044676b8401f"
+    },
+    {
+     "index": 1,
+     "name": "abigail1-a-s1 · Hero and featured",
+     "tag": "section",
+     "class": "hero",
+     "id": "",
+     "top": 77,
+     "height": 1087,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": true,
+     "fingerprint": "009f650da023fc8c"
+    },
+    {
+     "index": 2,
+     "name": "abigail1-a-s2 · All stories",
+     "tag": "section",
+     "class": "all",
+     "id": "all-stories",
+     "top": 1164,
+     "height": 2106,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": true,
+     "fingerprint": "e53fec0f815e4c34"
+    },
+    {
+     "index": 3,
+     "name": "abigail1-a-s3 · Go deeper",
+     "tag": "section",
+     "class": "deeper",
+     "id": "",
+     "top": 3270,
+     "height": 638,
+     "background": "rgb(43, 103, 91)",
+     "approved": true,
+     "fingerprint": "52df80aeced35a7a"
+    },
+    {
+     "index": 4,
+     "name": "abigail1-a-s4 · Main site footer",
+     "tag": "footer",
+     "class": "site-foot-wrap",
+     "id": "",
+     "top": 3908,
+     "height": 336,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": true,
+     "fingerprint": "9fdcfde3a069b93b"
+    }
+   ],
+   "tweaks": [
+    {
+     "name": "topic",
+     "group": "Filters (abigail1-a-s2)",
+     "options": [
+      "All",
+      "News",
+      "User Tips",
+      "Analyst Recognition",
+      "QW Inside",
+      "QualiWare CEO Blog Post",
+      "France"
+     ],
+     "default": "All",
+     "states": [
+      {
+       "value": "News",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured (its header)",
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topic-news.png"
+      },
+      {
+       "value": "User Tips",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured (its header)",
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topic-user-tips.png"
+      },
+      {
+       "value": "Analyst Recognition",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured (its header)",
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topic-analyst-recognition.png"
+      },
+      {
+       "value": "QW Inside",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured (its header)",
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topic-qw-inside.png"
+      },
+      {
+       "value": "QualiWare CEO Blog Post",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured (its header)",
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topic-qualiware-ceo-blog-post.png"
+      },
+      {
+       "value": "France",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured (its header)",
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topic-france.png"
+      }
+     ]
+    },
+    {
+     "name": "sort",
+     "group": "Filters (abigail1-a-s2)",
+     "options": [
+      "Newest",
+      "Oldest",
+      "A–Z"
+     ],
+     "default": "Newest",
+     "states": [
+      {
+       "value": "Oldest",
+       "sections": [
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--sort-oldest.png"
+      },
+      {
+       "value": "A–Z",
+       "sections": [
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--sort-az.png"
+      }
+     ]
+    },
+    {
+     "name": "topicMenuOpen",
+     "group": "Filters (abigail1-a-s2)",
+     "options": [
+      true,
+      false
+     ],
+     "default": false,
+     "states": [
+      {
+       "value": true,
+       "sections": [
+        "abigail1-a-s2 · All stories"
+       ],
+       "screenshot": "screenshots/states/abigail1-a--topicmenuopen-true.png"
+      }
+     ]
+    }
+   ],
+   "metrics": {
+    "typography": [
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "13px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 19,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(255, 255, 255)",
+       "rgb(82, 92, 114)"
+      ],
+      "sample": "28 Jul 2026"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "16px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 19,
+      "tags": [
+       "a",
+       "button",
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "All stories"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "15px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 12,
+      "tags": [
+       "button",
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(0, 255, 0)"
+      ],
+      "sample": "Newest"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "15px",
+      "lineHeight": "25.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 12,
+      "tags": [
+       "a",
+       "p"
+      ],
+      "colours": [
+       "rgb(210, 233, 227)",
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "QualiWare ApS Ryttermarken 15 DK 3520 Farum, Denma"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "12px",
+      "lineHeight": "normal",
+      "letterSpacing": "0.72px",
+      "transform": "uppercase",
+      "count": 11,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(46, 65, 99)"
+      ],
+      "sample": "News"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "25px",
+      "lineHeight": "30px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 9,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "QualiWare Recognized as a Champion"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "13px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.04px",
+      "transform": "uppercase",
+      "count": 4,
+      "tags": [
+       "h2",
+       "p"
+      ],
+      "colours": [
+       "rgb(152, 143, 143)",
+       "rgb(82, 92, 114)"
+      ],
+      "sample": "Featured stories"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "16px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 4,
+      "tags": [
+       "a",
+       "button"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(255, 255, 255)",
+       "rgb(43, 103, 91)"
+      ],
+      "sample": "Watch webinars"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "112px",
+      "lineHeight": "112px",
+      "letterSpacing": "-3px",
+      "transform": "none",
+      "count": 2,
+      "tags": [
+       "h1",
+       "mark"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "The QualiWare"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "14px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 2,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(152, 143, 143)"
+      ],
+      "sample": "Certified in ISO 27001 · UN Global Compact partici"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "14px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "Blog"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "20px",
+      "lineHeight": "30px",
+      "letterSpacing": "1.6px",
+      "transform": "uppercase",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(210, 233, 227)"
+      ],
+      "sample": "Go deeper"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "20px",
+      "lineHeight": "30px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(210, 233, 227)"
+      ],
+      "sample": "Watch a recorded webinar, or explore how QualiWare"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "24px",
+      "lineHeight": "33.6px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(82, 92, 114)"
+      ],
+      "sample": "Stories that show the platform at work, and how we"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "30px",
+      "lineHeight": "34.5px",
+      "letterSpacing": "-0.5px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "QualiWare Recognized as a Champion"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "44px",
+      "lineHeight": "48.4px",
+      "letterSpacing": "-0.5px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "What is a Digital Twin of an Organization (DTO)?"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "56px",
+      "lineHeight": "58.8px",
+      "letterSpacing": "-1px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "See the platform behind the stories"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "64px",
+      "lineHeight": "normal",
+      "letterSpacing": "-1.5px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "All stories"
+     }
+    ],
+    "colours": {
+     "rgb(227, 241, 238)": {
+      "border": 2,
+      "css": 1
+     },
+     "rgb(0, 0, 0)": {
+      "text": 50,
+      "border": 22,
+      "background": 5,
+      "svg": 7
+     },
+     "rgb(255, 255, 255)": {
+      "text": 17,
+      "background": 6
+     },
+     "rgb(82, 92, 114)": {
+      "text": 14,
+      "css": 1
+     },
+     "rgb(243, 249, 247)": {
+      "background": 11,
+      "css": 1
+     },
+     "rgb(46, 65, 99)": {
+      "text": 11,
+      "border": 1,
+      "css": 1
+     },
+     "rgb(210, 233, 227)": {
+      "background": 11,
+      "text": 3,
+      "css": 1
+     },
+     "rgb(0, 255, 0)": {
+      "text": 1,
+      "css": 1
+     },
+     "rgb(43, 103, 91)": {
+      "background": 1,
+      "text": 1,
+      "css": 1
+     },
+     "rgb(152, 143, 143)": {
+      "text": 5,
+      "css": 1
+     }
+    },
+    "images": [
+     {
+      "alt": "QualiWare",
+      "w": 126,
+      "h": 30,
+      "natural": [
+       300,
+       71
+      ],
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/brand/qualiware-wordmark-black.svg"
+     },
+     {
+      "alt": "",
+      "w": 787,
+      "h": 492,
+      "natural": [
+       850,
+       850
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/city-collage-blue.png"
+     },
+     {
+      "alt": "",
+      "w": 477,
+      "h": 358,
+      "natural": [
+       533,
+       533
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/gold-stars.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       533,
+       533
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/gold-stars.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       1447,
+       1600
+      ],
+      "objectFit": "contain",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/restricted/analyst-and-awards/gartner-mq-dto.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       850,
+       850
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/city-collage-blue.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       1600,
+       1600
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/people-reviewing-charts-documents.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       650,
+       650
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/lock-collage-orange.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       800,
+       800
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/woman-presenting-with-tablet.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       450,
+       450
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/manufacturing-collage.png"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       650,
+       650
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/places/city-copenhagen.jpg"
+     },
+     {
+      "alt": "",
+      "w": 413,
+      "h": 310,
+      "natural": [
+       1600,
+       720
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/team-workshop-sticky-notes-wide.png"
+     },
+     {
+      "alt": "Two colleagues looking at a laptop together",
+      "w": 594,
+      "h": 446,
+      "natural": [
+       650,
+       650
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/two-colleagues-at-laptop.png"
+     },
+     {
+      "alt": "QualiWare",
+      "w": 150,
+      "h": 36,
+      "natural": [
+       300,
+       71
+      ],
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/brand/qualiware-wordmark-white.svg"
+     }
+    ],
+    "backgroundImages": [],
+    "fonts": [
+     "PT Sans 400 normal",
+     "PT Sans 700 normal",
+     "PT Mono 400 normal"
+    ]
+   }
+  },
+  {
+   "title": "abigail1-a · Mobile",
+   "kind": "phone",
+   "slug": "abigail1-a-mobile",
+   "width": 390,
+   "height": 5805,
+   "source": "design/source/abigail1-a-mobile.dc.html",
+   "static": "design/static/abigail1-a-mobile.html",
+   "screenshots": {
+    "en": "screenshots/abigail1-a-mobile.en.png"
+   },
+   "languages": [
+    "en"
+   ],
+   "handoff_comment": "variant: Mobile version of abigail1-a (board-01.dc.html), 390 px wide: the same sections, content, images and behaviour, laid out for this width. Build it as abigail1-a's layout at this width: everything in abigail1-a's HANDOFF comment holds unless noted here.\nwhat changes at this width, section by section (fill in):\n  · header (s1): topic shortcuts and the qualiware.com link are hidden (the Topic filter in s2 does the same job); wordmark, Blog tag and a 44px \"Watch webinars\" pill stay.\n  · s1 Hero and featured: 16px side margins; h1 58px; featured cards stacked, big card first.\n  · s2 All stories: h2 42px; the search field comes first at full width, then Topic (full-width button, its panel full width under the bar) and Sort; one column of cards; full-width \"Load more stories\".\n  · s3 Go deeper: text over photo, buttons full width.\n  · s4 Main site footer: stands for the main site's phone footer: brand on top, then two columns of links (44px rows).\nbrief: abigail-qualiware-blog-site-brief-1.md, ID abigail1 (Content Site - Brief Generator v1).\nannotations: the bright red .sec-tag chips (#e60000, deliberately outside the brand palette) are canvas-only section labels for feedback, named <brief ID>-<artboard letter>-s<n> (e.g. \"abigail1-a-s1\"); sections are numbered in page order and renumber when a section is added, removed or moved, and artboard letters close up when an artboard is deleted; they are toggled by the \"Show section labels\" tweak, and clicking one in Play mode copies its name to the clipboard. Do NOT build them (nor the copy script).\nprototype: links name their website page in data-goto (data-goto-else: the page to use until it exists): build each to that page's URL. The hrefs to board-NN.dc.html, onClick=\"{{navGo}}\", goVals() and the onGo prop are canvas-only wiring for Play and previews: do NOT build them.\nartboard role (canvas-only): Mobile version of abigail1-a (its role follows that artboard: built when that artboard is the Lead); the chip at the top-left shows the canvas page and that. Annotation only: do NOT build the chip.",
+   "sections": [
+    {
+     "index": 0,
+     "name": "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+     "tag": "header",
+     "class": "bh",
+     "id": "",
+     "top": 0,
+     "height": 65,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": null,
+     "fingerprint": "09e2ddd77e26718a"
+    },
+    {
+     "index": 1,
+     "name": "abigail1-a-s1 · Hero and featured · Mobile",
+     "tag": "section",
+     "class": "hero",
+     "id": "",
+     "top": 65,
+     "height": 1203,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": null,
+     "fingerprint": "d2341f48323cb976"
+    },
+    {
+     "index": 2,
+     "name": "abigail1-a-s2 · All stories · Mobile",
+     "tag": "section",
+     "class": "all",
+     "id": "all-stories",
+     "top": 1268,
+     "height": 4538,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": null,
+     "fingerprint": "46a93fca83f57d4d"
+    }
+   ],
+   "tweaks": [
+    {
+     "name": "topic",
+     "group": "Filters (abigail1-a-s2)",
+     "options": [
+      "All",
+      "News",
+      "User Tips",
+      "Analyst Recognition",
+      "QW Inside",
+      "QualiWare CEO Blog Post",
+      "France"
+     ],
+     "default": "All",
+     "states": [
+      {
+       "value": "News",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topic-news.png"
+      },
+      {
+       "value": "User Tips",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topic-user-tips.png"
+      },
+      {
+       "value": "Analyst Recognition",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topic-analyst-recognition.png"
+      },
+      {
+       "value": "QW Inside",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topic-qw-inside.png"
+      },
+      {
+       "value": "QualiWare CEO Blog Post",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topic-qualiware-ceo-blog-post.png"
+      },
+      {
+       "value": "France",
+       "sections": [
+        "abigail1-a-s1 · Hero and featured · Mobile (its header)",
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topic-france.png"
+      }
+     ]
+    },
+    {
+     "name": "sort",
+     "group": "Filters (abigail1-a-s2)",
+     "options": [
+      "Newest",
+      "Oldest",
+      "A–Z"
+     ],
+     "default": "Newest",
+     "states": [
+      {
+       "value": "Oldest",
+       "sections": [
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--sort-oldest.png"
+      },
+      {
+       "value": "A–Z",
+       "sections": [
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--sort-az.png"
+      }
+     ]
+    },
+    {
+     "name": "topicMenuOpen",
+     "group": "Filters (abigail1-a-s2)",
+     "options": [
+      true,
+      false
+     ],
+     "default": false,
+     "states": [
+      {
+       "value": true,
+       "sections": [
+        "abigail1-a-s2 · All stories · Mobile"
+       ],
+       "screenshot": "screenshots/states/abigail1-a-mobile--topicmenuopen-true.png"
+      }
+     ]
+    }
+   ],
+   "metrics": {
+    "typography": [
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "13px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 19,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(255, 255, 255)",
+       "rgb(82, 92, 114)"
+      ],
+      "sample": "28 Jul 2026"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "16px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 16,
+      "tags": [
+       "button",
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "All stories"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "15px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 14,
+      "tags": [
+       "button",
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)",
+       "rgb(0, 255, 0)"
+      ],
+      "sample": "Topic:"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "12px",
+      "lineHeight": "normal",
+      "letterSpacing": "0.72px",
+      "transform": "uppercase",
+      "count": 11,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(46, 65, 99)"
+      ],
+      "sample": "News"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "23px",
+      "lineHeight": "27.6px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 9,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "QualiWare Recognized as a Champion"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "58px",
+      "lineHeight": "58px",
+      "letterSpacing": "-1.5px",
+      "transform": "none",
+      "count": 2,
+      "tags": [
+       "h1",
+       "mark"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "The QualiWare"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "13px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.04px",
+      "transform": "uppercase",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(82, 92, 114)"
+      ],
+      "sample": "Featured stories"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "14px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "Blog"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "15px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "a"
+      ],
+      "colours": [
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "Watch webinars"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "16px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "button"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "Load more stories"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "19px",
+      "lineHeight": "26.6px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(82, 92, 114)"
+      ],
+      "sample": "Stories that show the platform at work, and how we"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "26px",
+      "lineHeight": "29.9px",
+      "letterSpacing": "-0.5px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "QualiWare Recognized as a Champion"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "30px",
+      "lineHeight": "33px",
+      "letterSpacing": "-0.5px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "What is a Digital Twin of an Organization (DTO)?"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "42px",
+      "lineHeight": "normal",
+      "letterSpacing": "-1.5px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(0, 0, 0)"
+      ],
+      "sample": "All stories"
+     }
+    ],
+    "colours": {
+     "rgb(227, 241, 238)": {
+      "border": 2,
+      "css": 1
+     },
+     "rgb(0, 0, 0)": {
+      "text": 49,
+      "border": 22,
+      "background": 4,
+      "svg": 7
+     },
+     "rgb(255, 255, 255)": {
+      "text": 4,
+      "background": 5
+     },
+     "rgb(82, 92, 114)": {
+      "text": 14,
+      "css": 1
+     },
+     "rgb(243, 249, 247)": {
+      "background": 11,
+      "css": 1
+     },
+     "rgb(46, 65, 99)": {
+      "text": 11,
+      "css": 1
+     },
+     "rgb(210, 233, 227)": {
+      "background": 11,
+      "css": 1
+     },
+     "rgb(0, 255, 0)": {
+      "text": 1,
+      "css": 1
+     },
+     "rgb(43, 103, 91)": {
+      "css": 1
+     },
+     "rgb(152, 143, 143)": {
+      "css": 1
+     }
+    },
+    "images": [
+     {
+      "alt": "QualiWare",
+      "w": 104,
+      "h": 25,
+      "natural": [
+       300,
+       71
+      ],
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/brand/qualiware-wordmark-black.svg"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 224,
+      "natural": [
+       850,
+       850
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/city-collage-blue.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       533,
+       533
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/gold-stars.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       533,
+       533
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/gold-stars.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       1447,
+       1600
+      ],
+      "objectFit": "contain",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/restricted/analyst-and-awards/gartner-mq-dto.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       850,
+       850
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/city-collage-blue.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       1600,
+       1600
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/people-reviewing-charts-documents.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       650,
+       650
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/lock-collage-orange.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       800,
+       800
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/woman-presenting-with-tablet.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       450,
+       450
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/illustrations/manufacturing-collage.png"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       650,
+       650
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/places/city-copenhagen.jpg"
+     },
+     {
+      "alt": "",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       1600,
+       720
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/team-workshop-sticky-notes-wide.png"
+     }
+    ],
+    "backgroundImages": [],
+    "fonts": [
+     "PT Sans 400 normal",
+     "PT Sans 700 normal",
+     "PT Mono 400 normal"
+    ]
+   }
+  },
+  {
+   "title": "abigail1-a · Mobile · Part 2",
+   "kind": "phone-part",
+   "slug": "abigail1-a-mobile-part-2",
+   "width": 390,
+   "height": 1628,
+   "source": "design/source/abigail1-a-mobile-part-2.dc.html",
+   "static": "design/static/abigail1-a-mobile-part-2.html",
+   "screenshots": {
+    "en": "screenshots/abigail1-a-mobile-part-2.en.png"
+   },
+   "languages": [
+    "en"
+   ],
+   "handoff_comment": "variant: Mobile version of abigail1-a (board-01.dc.html), 390 px wide: the same sections, content, images and behaviour, laid out for this width. Build it as abigail1-a's layout at this width: everything in abigail1-a's HANDOFF comment holds unless noted here.\nwhat changes at this width, section by section (fill in):\n  · header (s1): topic shortcuts and the qualiware.com link are hidden (the Topic filter in s2 does the same job); wordmark, Blog tag and a 44px \"Watch webinars\" pill stay.\n  · s1 Hero and featured: 16px side margins; h1 58px; featured cards stacked, big card first.\n  · s2 All stories: h2 42px; the search field comes first at full width, then Topic (full-width button, its panel full width under the bar) and Sort; one column of cards; full-width \"Load more stories\".\n  · s3 Go deeper: text over photo, buttons full width.\n  · s4 Main site footer: stands for the main site's phone footer: brand on top, then two columns of links (44px rows).\nbrief: abigail-qualiware-blog-site-brief-1.md, ID abigail1 (Content Site - Brief Generator v1).\nannotations: the bright red .sec-tag chips (#e60000, deliberately outside the brand palette) are canvas-only section labels for feedback, named <brief ID>-<artboard letter>-s<n> (e.g. \"abigail1-a-s1\"); sections are numbered in page order and renumber when a section is added, removed or moved, and artboard letters close up when an artboard is deleted; they are toggled by the \"Show section labels\" tweak, and clicking one in Play mode copies its name to the clipboard. Do NOT build them (nor the copy script).\nprototype: links name their website page in data-goto (data-goto-else: the page to use until it exists): build each to that page's URL. The hrefs to board-NN.dc.html, onClick=\"{{navGo}}\", goVals() and the onGo prop are canvas-only wiring for Play and previews: do NOT build them. Shared part site-footer (data-part): build it once, as one component on every page that has it; values set outside its markers are per page.\nartboard role (canvas-only): Part 2 of abigail1-a · Mobile: the same page continued below the previous part (the canvas caps a frame at 8000 px), so build the parts as one page, in order; its role follows that artboard, and the chip at the top-left shows that role (updated at every sync). Annotation only: do NOT build the chip.",
+   "sections": [
+    {
+     "index": 0,
+     "name": "abigail1-a-s3 · Go deeper · Mobile",
+     "tag": "section",
+     "class": "deeper",
+     "id": "",
+     "top": 0,
+     "height": 822,
+     "background": "rgb(43, 103, 91)",
+     "approved": null,
+     "fingerprint": "52df80aeced35a7a"
+    },
+    {
+     "index": 1,
+     "name": "abigail1-a-s4 · Main site footer · Mobile",
+     "tag": "footer",
+     "class": "site-foot-wrap",
+     "id": "",
+     "top": 822,
+     "height": 805,
+     "background": "rgba(0, 0, 0, 0)",
+     "approved": null,
+     "fingerprint": "3ea250b64ddd67a9"
+    }
+   ],
+   "tweaks": [],
+   "metrics": {
+    "typography": [
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "15px",
+      "lineHeight": "25.5px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 12,
+      "tags": [
+       "a",
+       "p"
+      ],
+      "colours": [
+       "rgb(210, 233, 227)",
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "QualiWare ApS Ryttermarken 15 DK 3520 Farum, Denma"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "13px",
+      "lineHeight": "normal",
+      "letterSpacing": "1.04px",
+      "transform": "uppercase",
+      "count": 3,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(152, 143, 143)"
+      ],
+      "sample": "Contact"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "14px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 2,
+      "tags": [
+       "span"
+      ],
+      "colours": [
+       "rgb(152, 143, 143)"
+      ],
+      "sample": "Certified in ISO 27001 · UN Global Compact partici"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "700",
+      "style": "normal",
+      "size": "16px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 2,
+      "tags": [
+       "a"
+      ],
+      "colours": [
+       "rgb(255, 255, 255)",
+       "rgb(43, 103, 91)"
+      ],
+      "sample": "Watch recorded webinars"
+     },
+     {
+      "font": "PT Mono",
+      "weight": "400",
+      "style": "normal",
+      "size": "18px",
+      "lineHeight": "27px",
+      "letterSpacing": "1.44px",
+      "transform": "uppercase",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(210, 233, 227)"
+      ],
+      "sample": "Go deeper"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "18px",
+      "lineHeight": "27px",
+      "letterSpacing": "normal",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "p"
+      ],
+      "colours": [
+       "rgb(210, 233, 227)"
+      ],
+      "sample": "Watch a recorded webinar, or explore how QualiWare"
+     },
+     {
+      "font": "PT Sans",
+      "weight": "400",
+      "style": "normal",
+      "size": "38px",
+      "lineHeight": "39.9px",
+      "letterSpacing": "-1px",
+      "transform": "none",
+      "count": 1,
+      "tags": [
+       "h2"
+      ],
+      "colours": [
+       "rgb(255, 255, 255)"
+      ],
+      "sample": "See the platform behind the stories"
+     }
+    ],
+    "colours": {
+     "rgb(43, 103, 91)": {
+      "background": 1,
+      "text": 1,
+      "css": 1
+     },
+     "rgb(210, 233, 227)": {
+      "text": 3,
+      "css": 1
+     },
+     "rgb(255, 255, 255)": {
+      "text": 13,
+      "background": 1
+     },
+     "rgb(0, 0, 0)": {
+      "background": 1
+     },
+     "rgb(152, 143, 143)": {
+      "text": 5,
+      "css": 1
+     },
+     "rgb(46, 65, 99)": {
+      "border": 1,
+      "css": 1
+     },
+     "rgb(82, 92, 114)": {
+      "css": 1
+     },
+     "rgb(227, 241, 238)": {
+      "css": 1
+     },
+     "rgb(0, 255, 0)": {
+      "css": 1
+     },
+     "rgb(243, 249, 247)": {
+      "css": 1
+     }
+    },
+    "images": [
+     {
+      "alt": "Two colleagues looking at a laptop together",
+      "w": 358,
+      "h": 269,
+      "natural": [
+       650,
+       650
+      ],
+      "objectFit": "cover",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/photos/people/two-colleagues-at-laptop.png"
+     },
+     {
+      "alt": "QualiWare",
+      "w": 150,
+      "h": 36,
+      "natural": [
+       300,
+       71
+      ],
+      "objectFit": "fill",
+      "objectPosition": "50% 50%",
+      "filter": "",
+      "opacity": "1",
+      "path": "assets/images/brand/qualiware-wordmark-white.svg"
+     }
+    ],
+    "backgroundImages": [],
+    "fonts": [
+     "PT Sans 400 normal",
+     "PT Sans 700 normal",
+     "PT Mono 400 normal"
+    ]
+   }
+  }
+ ],
+ "links": [
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Blog",
+   "goto": "Blog overview",
+   "else": null,
+   "route": "",
+   "status": "this page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "qualiware.com",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Watch webinars",
+   "href": "https://www.qualiware.com/webinars",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "News 28 Jul 2026 What is a Digital Twin of an Organization (DTO)? Read story →",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Analyst Recognition 4 Aug 2026 QualiWare Recognized as a Champion Read story →",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Analyst Recognition 4 Aug 2026 QualiWare Recognized as a Champion Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Analyst Recognition 30 Jul 2026 Why Gartner's First Magic Quadrant for Digital T",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "News 28 Jul 2026 What is a Digital Twin of an Organization (DTO)? Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "User Tips 20 Jul 2026 Project Portfolio Management Is About More Than Managing P",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "News 22 Jun 2026 Own Your Digital Resilience Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "News 10 Jun 2026 Trends in Enterprise Architecture 2026 Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "User Tips 11 May 2026 QualiWare DTO Manufacturing use case Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "QualiWare CEO Blog Post 28 Apr 2026 Great Preparedness Day Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "User Tips 14 Apr 2026 Build a Digital Twin of an Organization (DTO) in 8–12 week",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Watch recorded webinars",
+   "href": "https://www.qualiware.com/webinars",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Explore the platform",
+   "href": "https://www.qualiware.com/digital-twin-of-an-organization",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "+45 45 470 700",
+   "href": "tel:+4545470700",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "info@qualiware.com",
+   "href": "mailto:info@qualiware.com",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "sales@qualiware.com",
+   "href": "mailto:sales@qualiware.com",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "QualiWare blog",
+   "goto": "Blog overview",
+   "else": null,
+   "route": "",
+   "status": "this page"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Webinars",
+   "href": "https://www.qualiware.com/webinars",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Analyst research",
+   "href": "https://www.qualiware.com/gartner",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Customer stories",
+   "href": "https://www.qualiware.com/clients",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Book a demo",
+   "href": "https://www.qualiware.com/book-a-demo",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Terms & conditions",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Cookies policy",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Library",
+   "text": "Certifications",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "Blog",
+   "goto": "Blog overview",
+   "else": null,
+   "route": "",
+   "status": "this page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "qualiware.com",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "Watch webinars",
+   "href": "https://www.qualiware.com/webinars",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "News 28 Jul 2026 What is a Digital Twin of an Organization (DTO)? Read story →",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "Analyst Recognition 4 Aug 2026 QualiWare Recognized as a Champion Read story →",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "Analyst Recognition 4 Aug 2026 QualiWare Recognized as a Champion Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "Analyst Recognition 30 Jul 2026 Why Gartner's First Magic Quadrant for Digital T",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "News 28 Jul 2026 What is a Digital Twin of an Organization (DTO)? Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "User Tips 20 Jul 2026 Project Portfolio Management Is About More Than Managing P",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "News 22 Jun 2026 Own Your Digital Resilience Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "News 10 Jun 2026 Trends in Enterprise Architecture 2026 Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "User Tips 11 May 2026 QualiWare DTO Manufacturing use case Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "QualiWare CEO Blog Post 28 Apr 2026 Great Preparedness Day Read story",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile",
+   "text": "User Tips 14 Apr 2026 Build a Digital Twin of an Organization (DTO) in 8–12 week",
+   "goto": "Blog post",
+   "else": null,
+   "route": "blog-post/",
+   "status": "planned page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Watch recorded webinars",
+   "href": "https://www.qualiware.com/webinars",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Explore the platform",
+   "href": "https://www.qualiware.com/digital-twin-of-an-organization",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "+45 45 470 700",
+   "href": "tel:+4545470700",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "info@qualiware.com",
+   "href": "mailto:info@qualiware.com",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "sales@qualiware.com",
+   "href": "mailto:sales@qualiware.com",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "QualiWare blog",
+   "goto": "Blog overview",
+   "else": null,
+   "route": "",
+   "status": "this page"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Webinars",
+   "href": "https://www.qualiware.com/webinars",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Analyst research",
+   "href": "https://www.qualiware.com/gartner",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Customer stories",
+   "href": "https://www.qualiware.com/clients",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Book a demo",
+   "href": "https://www.qualiware.com/book-a-demo",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Terms & conditions",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Cookies policy",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  },
+  {
+   "artboard": "abigail1-a · Mobile · Part 2",
+   "text": "Certifications",
+   "href": "https://www.qualiware.com/",
+   "status": "external"
+  }
+ ],
+ "colours": [
+  {
+   "css": "rgb(82, 92, 114)",
+   "hex": "#525c72",
+   "alpha": 1.0,
+   "uses": {
+    "text": 28,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "derived",
+   "name": "66% Dark Blue + 34% Dark Grey",
+   "role": "secondary text (--slate). Dark Blue at 18% for the panel shadow."
+  },
+  {
+   "css": "rgb(227, 241, 238)",
+   "hex": "#e3f1ee",
+   "alpha": 1.0,
+   "uses": {
+    "border": 4,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "derived",
+   "name": "62% Ice Blue + white",
+   "role": "dividers (--line)"
+  },
+  {
+   "css": "rgb(243, 249, 247)",
+   "hex": "#f3f9f7",
+   "alpha": 1.0,
+   "uses": {
+    "background": 22,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "derived",
+   "name": "27% Ice Blue + white",
+   "role": "hover backgrounds, image wells (--surface)"
+  },
+  {
+   "css": "rgb(0, 0, 0)",
+   "hex": "#000000",
+   "alpha": 1.0,
+   "uses": {
+    "text": 99,
+    "border": 44,
+    "background": 10,
+    "svg": 14
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "Black"
+  },
+  {
+   "css": "rgb(0, 255, 0)",
+   "hex": "#00ff00",
+   "alpha": 1.0,
+   "uses": {
+    "text": 2,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "QW Green"
+  },
+  {
+   "css": "rgb(43, 103, 91)",
+   "hex": "#2b675b",
+   "alpha": 1.0,
+   "uses": {
+    "background": 2,
+    "text": 2,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "Dark Green"
+  },
+  {
+   "css": "rgb(46, 65, 99)",
+   "hex": "#2e4163",
+   "alpha": 1.0,
+   "uses": {
+    "text": 22,
+    "border": 2,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "Dark Blue"
+  },
+  {
+   "css": "rgb(152, 143, 143)",
+   "hex": "#988f8f",
+   "alpha": 1.0,
+   "uses": {
+    "text": 10,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "Dark Grey"
+  },
+  {
+   "css": "rgb(210, 233, 227)",
+   "hex": "#d2e9e3",
+   "alpha": 1.0,
+   "uses": {
+    "background": 22,
+    "text": 6,
+    "css": 3
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "Ice Blue"
+  },
+  {
+   "css": "rgb(255, 255, 255)",
+   "hex": "#ffffff",
+   "alpha": 1.0,
+   "uses": {
+    "text": 34,
+    "background": 12
+   },
+   "artboards": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ],
+   "kind": "guide",
+   "name": "White"
+  }
+ ],
+ "fonts": [
+  "PT Mono 400 normal",
+  "PT Sans 400 normal",
+  "PT Sans 700 normal"
+ ],
+ "assets": [
+  {
+   "path": "assets/fonts/pt-mono/PTMono-Regular.woff2",
+   "sha256": "235be2f66f54840e97e67d2c71dfe6d0537ee656ad345555ac29a9716b28571a",
+   "bytes": 70108,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-sans-narrow/PTSansNarrow-Bold.woff2",
+   "sha256": "c2643e4e2039fa4328514fc5f951c07664f53c47d31135e2c3ffc67c7280b352",
+   "bytes": 124532,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-sans/PTSans-Bold.woff2",
+   "sha256": "6deaf97d060a333cd55c8cd77d240bcfd6a776dfd9ddb6db455caf43a094ba4d",
+   "bytes": 116208,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-sans/PTSans-Italic.woff2",
+   "sha256": "39f349c7fce5b51cc3a2a657d4f396fe77e8b93df3e7e4c6abfda8d6b74d5cfc",
+   "bytes": 107544,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-sans/PTSans-Regular.woff2",
+   "sha256": "b7b53f9fdb0d2a896c10c0d47621cc98a0a4eb84a4156c3e1f3c49ea1ccda12b",
+   "bytes": 113536,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-serif/PTSerif-Bold.woff2",
+   "sha256": "74e07e1ad4f2b1a03970b9be1e2d73ab4ec47146af75a9e44e3650ac72ec2e57",
+   "bytes": 75384,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-serif/PTSerif-Italic.woff2",
+   "sha256": "f2d4e97b4c3b6ff40d78133f48d733b7aea5553885553e40a4390a9b81147218",
+   "bytes": 93036,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/fonts/pt-serif/PTSerif-Regular.woff2",
+   "sha256": "c1295676aa0f3a1779d899f24343778af2b611bbe85f0831b2a31776cab264e6",
+   "bytes": 86324,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/brand/qualiware-wordmark-black.svg",
+   "sha256": "0e4d680446db00db487c50617e105052c0dbab331124dcefb170d61a3200b8da",
+   "bytes": 2800,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile"
+   ]
+  },
+  {
+   "path": "assets/images/brand/qualiware-wordmark-white.svg",
+   "sha256": "83e9d3e20f35c7edebcc16e246d71dc5fce8010d5b4b4c75d82e8576893ec057",
+   "bytes": 2815,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/city-collage-blue.png",
+   "sha256": "147c4bdb1791ac4ab7af36e06a42ec399e2d9a9645ab9879d7547ee856cfd67f",
+   "bytes": 367314,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/city-collage-violet.png",
+   "sha256": "9ccd865ccff09b5b6f092fe7652de83040953844ff6cdf76a263a8434014d69a",
+   "bytes": 346583,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/eye-collage-orange.png",
+   "sha256": "8e88974df32df78be7a71cb89bf2c3fb36cfffba5c5356c32993c94354e1c27e",
+   "bytes": 344039,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/gold-stars.png",
+   "sha256": "fbe9578d4aa83e1926f953dae26d28a1593d2e7b6994859afd48563a05c5f219",
+   "bytes": 207470,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/lock-collage-orange.png",
+   "sha256": "947d48fdc779b0469f7735cf56c655f1588ec82158a553cae116800abdaae4f0",
+   "bytes": 171496,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/manufacturing-collage.png",
+   "sha256": "7d7e3a948319d64258654d6181e2ea97a9933afee9d5564dbd2b3ee0b4b8afdf",
+   "bytes": 334942,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/illustrations/planet-in-space.png",
+   "sha256": "3849b43b7a02a23a23b2991896ae64e3335a72487ec5921763018a53d84e7151",
+   "bytes": 165992,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/photos/people/people-reviewing-charts-documents.png",
+   "sha256": "a6d2377e5c22948f91b3f17e3b6276b9283552bf31b64d7e4c82d25c614f12ed",
+   "bytes": 619109,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/photos/people/team-workshop-sticky-notes-wide.png",
+   "sha256": "d467392377c596cd6151516151ad53a0341757f4a092181b85ce141bb9ae4802",
+   "bytes": 563856,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/photos/people/two-colleagues-at-laptop.png",
+   "sha256": "193aa0b01e9f09bf1e6f76928e0c2b00802c1883d7625b5aec17adfd7ade30f1",
+   "bytes": 179365,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/photos/people/woman-presenting-with-tablet.png",
+   "sha256": "bd505a204cfdc9e9e98be3f34400e7b782715256d49cf83d669c28e1104ebca7",
+   "bytes": 259299,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/photos/places/city-copenhagen.jpg",
+   "sha256": "464aa5b4ee8cdb46c734d85c97e4c3747216532e39999a8b2ff457c021fa5e7b",
+   "bytes": 120670,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/photos/places/city-london.jpg",
+   "sha256": "2e8f21b193737ba47542443a4a75ef887a3208401753eede6e7043241cfeb4b7",
+   "bytes": 114603,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/product/screenshots/qualichat.png",
+   "sha256": "6d1d3e49e7581951fd911cf88a31485ab1162fd0d22724311b2759a14647ab4c",
+   "bytes": 160262,
+   "restricted": false,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/restricted/analyst-and-awards/gartner-mq-dto.png",
+   "sha256": "13f5906277d01b23ff94ff060284a12c7815ad13c299e3f6a37a18ce935802d4",
+   "bytes": 50109,
+   "restricted": true,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  },
+  {
+   "path": "assets/images/restricted/analyst-and-awards/info-tech-2026-leader-ea.png",
+   "sha256": "b3308c7aee6160a727b26219f800d65d931aa074f158e2ad093fd7c3451e4e75",
+   "bytes": 73154,
+   "restricted": true,
+   "used_by": [
+    "abigail1-a · Library",
+    "abigail1-a · Mobile",
+    "abigail1-a · Mobile · Part 2"
+   ]
+  }
+ ],
+ "restricted_assets": "images from the design guide's restricted/ folders (customer and partner logos, employee and event photos, awards): use them only where this package uses them",
+ "interactions": "interactions.txt",
+ "changes": null,
+ "strip": [
+  "section labels, role chip, checklist and status (removed from source and static already)",
+  "href=\"board-NN.dc.html\", onClick=\"{{navGo}}\", goVals() and the onGo prop (canvas-only prototype wiring)",
+  "the Language tweak and language-layer bookkeeping (data-l spans, data-src, data-stale)"
+ ]
+}

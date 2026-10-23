@@ -4,6 +4,7 @@
     {"code": "en", "name": "English", "source": true}
   ],
   "pages": [
-    {"name": "Front page", "route": "", "status": "live", "handoff": null}
+    {"name": "Blog overview", "route": "", "status": "live", "handoff": "handoffs/abigail1/handoff-2026-10-23"},
+    {"name": "Blog post", "route": "blog-post/", "status": "planned", "handoff": null}
   ]
 }
